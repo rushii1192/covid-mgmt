@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'dialog.ui'
+# Form implementation generated from reading ui file 'frontend/dialog.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -16,20 +16,19 @@ class Ui_Dialog(object):
         Dialog.setObjectName("Dialog")
         Dialog.resize(849, 468)
         Dialog.setStyleSheet("background-color: rgb(0, 170, 255);")
-        self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
-        self.buttonBox.setGeometry(QtCore.QRect(30, 240, 341, 32))
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName("buttonBox")
+        self.changeWindow = QtWidgets.QPushButton(Dialog)
+        self.changeWindow.setGeometry(QtCore.QRect(542, 308, 181, 51))
+        self.changeWindow.setStyleSheet("background-color: rgb(255, 255, 127);\n"
+"border-radius: 10px;")
+        self.changeWindow.setObjectName("changeWindow")
 
         self.retranslateUi(Dialog)
-        self.buttonBox.accepted.connect(Dialog.accept)
-        self.buttonBox.rejected.connect(Dialog.reject)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.changeWindow.setText(_translate("Dialog", "ChangeWindow"))
 
 
 if __name__ == "__main__":
