@@ -47,13 +47,13 @@ class Ui_LoginWindow(object):
         self.addButton.setText(_translate("LoginWindow", "Add"))
         self.label.setText(_translate("LoginWindow", "Hello World"))
 
-class Login(Ui_LoginWindow):
-        def __init__(self,widget) -> None:
+class LoginForm(QtWidgets.QMainWindow,Ui_LoginWindow):
+        def __init__(self) -> None:
             super().__init__()
-            self.setupUi(widget)   
+            self.setupUi(self)   
             self.clearButton.clicked.connect(self.clickedMe)  
             self.addButton.clicked.connect(self.changeLabel)    
-            print('Hello world')
+            print('Hello world I am imported from form')
 
         def clickedMe(self):
                 print('clear button')
@@ -66,9 +66,9 @@ class Login(Ui_LoginWindow):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    LoginWindow = QtWidgets.QWidget()
-    ui = Login(LoginWindow)
+#     LoginWindow = QtWidgets.QWidget()
+    ui = LoginForm()
 #     ui.setupUi(LoginWindow)
-    LoginWindow.show()
+    ui.show()
     sys.exit(app.exec_())
 
