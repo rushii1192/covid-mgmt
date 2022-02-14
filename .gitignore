@@ -1,2 +1,5 @@
 venv/ 
 .idea/
+__pycache__/
+covid-mgmt.pyproject
+covid-mgmt.pyproject.user
