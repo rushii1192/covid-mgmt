@@ -12,16 +12,7 @@ class Login(QtWidgets.QMainWindow,Ui_Dialog):
 
     def changeFrame(self):
         print('hello world')
-        self.hide()
-        self.lf = LoginForm()
-        self.lf.show()
-
-app = QtWidgets.QApplication(sys.argv)
-
-ui = Login()
-#     ui.setupUi(LoginWindow)
-ui.show()
-sys.exit(app.exec_())
+        
 
         # ui.setupUi(Dialog)
  
