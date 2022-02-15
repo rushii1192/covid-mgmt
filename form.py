@@ -10,7 +10,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_LoginWindow(object):
     def setupUi(self, LoginWindow):
         LoginWindow.setObjectName("LoginWindow")
@@ -48,27 +47,25 @@ class Ui_LoginWindow(object):
         self.label.setText(_translate("LoginWindow", "Hello World"))
 
 class LoginForm(QtWidgets.QMainWindow,Ui_LoginWindow):
-        def __init__(self) -> None:
-            super().__init__()
-            self.setupUi(self)   
-            self.clearButton.clicked.connect(self.clickedMe)  
-            self.addButton.clicked.connect(self.changeLabel)    
-            print('Hello world I am imported from form')
+    def __init__(self) -> None:
+        super().__init__()
+        self.setupUi(self)   
+        self.clearButton.clicked.connect(self.clickedMe)  
+        self.addButton.clicked.connect(self.changeLabel)    
+        print('Hello world I am imported from form')
 
-        def clickedMe(self):
-                print('clear button')
-                self.label.setText('')
-
-        def changeLabel(self):
-                print('change label')
-                self.label.setText(self.t1.text())
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-#     LoginWindow = QtWidgets.QWidget()
-    ui = LoginForm()
-#     ui.setupUi(LoginWindow)
-    ui.show()
-    sys.exit(app.exec_())
+    def clickedMe(self):
+        print('Change Window')
+        self.label.setText('')
+        
+    def changeLabel(self):
+        self.label.setText(self.t1.text())
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+# #     LoginWindow = QtWidgets.QWidget()
+#     ui = LoginForm()
+# #     ui.setupUi(LoginWindow)
+#     ui.show()
+#     sys.exit(app.exec_())
 
