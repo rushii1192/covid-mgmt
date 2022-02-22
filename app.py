@@ -10,7 +10,7 @@ ui = Login()
 lf = LoginForm()
 
 def changeLabel():
-    ui.changeWindow.clicked.connect(changeFrame)
+    # ui.changeWindow.clicked.connect(changeFrame)
     ui.show()
     lf.hide()
 
