@@ -19,8 +19,8 @@
   <widget class="QPushButton" name="changeWindow">
    <property name="geometry">
     <rect>
-     <x>542</x>
-     <y>308</y>
+     <x>340</x>
+     <y>370</y>
      <width>181</width>
      <height>51</height>
     </rect>
@@ -30,7 +30,7 @@
 border-radius: 10px;</string>
    </property>
    <property name="text">
-    <string>ChangeWindow</string>
+    <string>kjtlmhjbklij</string>
    </property>
   </widget>
  </widget>
