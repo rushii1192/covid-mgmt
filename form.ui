@@ -27,7 +27,8 @@
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(200, 46, 15);
-font: 18pt &quot;Segoe UI&quot;;</string>
+font: 18pt &quot;Segoe UI&quot;;
+border-radius: 20px;</string>
    </property>
    <property name="text">
     <string>Clear</string>
@@ -44,7 +45,8 @@ font: 18pt &quot;Segoe UI&quot;;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(53, 200, 20);
-font: 16pt &quot;Segoe UI&quot;;</string>
+font: 16pt &quot;Segoe UI&quot;;
+border-radius: 30px;</string>
    </property>
    <property name="text">
     <string>Add</string>
@@ -79,6 +81,22 @@ font: 16pt &quot;MS Gothic&quot;;</string>
    </property>
    <property name="text">
     <string>Hello World</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>130</y>
+     <width>461</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>frontend/images/trail.png</pixmap>
    </property>
   </widget>
  </widget>
