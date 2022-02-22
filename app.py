@@ -20,7 +20,7 @@ def changeFrame():
     lf.show()
     ui.hide()
 
-ui.changeWindow.clicked.connect(changeFrame)
+ui.loginButton.clicked.connect(changeFrame)
 ui.show()
 
 
