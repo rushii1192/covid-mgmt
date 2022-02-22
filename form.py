@@ -10,6 +10,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_LoginWindow(object):
     def setupUi(self, LoginWindow):
         LoginWindow.setObjectName("LoginWindow")
@@ -18,12 +19,14 @@ class Ui_LoginWindow(object):
         self.clearButton = QtWidgets.QPushButton(LoginWindow)
         self.clearButton.setGeometry(QtCore.QRect(620, 120, 131, 41))
         self.clearButton.setStyleSheet("background-color: rgb(200, 46, 15);\n"
-"font: 18pt \"Segoe UI\";")
+"font: 18pt \"Segoe UI\";\n"
+"border-radius: 20px;")
         self.clearButton.setObjectName("clearButton")
         self.addButton = QtWidgets.QPushButton(LoginWindow)
         self.addButton.setGeometry(QtCore.QRect(620, 200, 131, 41))
         self.addButton.setStyleSheet("background-color: rgb(53, 200, 20);\n"
-"font: 16pt \"Segoe UI\";")
+"font: 16pt \"Segoe UI\";\n"
+"border-radius: 30px;")
         self.addButton.setObjectName("addButton")
         self.t1 = QtWidgets.QLineEdit(LoginWindow)
         self.t1.setGeometry(QtCore.QRect(250, 90, 181, 31))
@@ -35,6 +38,11 @@ class Ui_LoginWindow(object):
 "border-color: rgb(255, 38, 0);\n"
 "font: 16pt \"MS Gothic\";")
         self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(LoginWindow)
+        self.label_2.setGeometry(QtCore.QRect(90, 130, 461, 221))
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap("frontend/images/trail.png"))
+        self.label_2.setObjectName("label_2")
 
         self.retranslateUi(LoginWindow)
         QtCore.QMetaObject.connectSlotsByName(LoginWindow)
@@ -60,12 +68,12 @@ class LoginForm(QtWidgets.QMainWindow,Ui_LoginWindow):
         
     def changeLabel(self):
         self.label.setText(self.t1.text())
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-# #     LoginWindow = QtWidgets.QWidget()
-#     ui = LoginForm()
-# #     ui.setupUi(LoginWindow)
-#     ui.show()
-#     sys.exit(app.exec_())
 
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    LoginWindow = QtWidgets.QWidget()
+    ui = Ui_LoginWindow()
+    ui.setupUi(LoginWindow)
+    LoginWindow.show()
+    sys.exit(app.exec_())
