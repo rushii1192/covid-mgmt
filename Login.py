@@ -8,12 +8,15 @@ class Login(QtWidgets.QMainWindow,Ui_LoginWindow):
         super().__init__()
         print('I am login imported from Login')
         self.setupUi(self)
-        self.loginButton.clicked.connect(self.changeFrame)
+        # self.loginButton.clicked.connect(self.loginButtonAction)
         # self.changeWindow.clicked.connect(self.changeFrame)
 
-    def changeFrame(self):
-        print('hello world')
-        
-
+    def loginError(self):
+        msg = QtWidgets.QMessageBox(self)
+        msg.setWindowTitle('Login Error')
+        msg.setText('Hey You have entered wrong credintials\nPlease check your username and password')
+        msg.setStyleSheet('color:white')
+        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        msg.exec_()
         # ui.setupUi(Dialog)
  
