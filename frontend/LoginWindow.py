@@ -16,7 +16,7 @@ class Ui_LoginWindow(object):
         LoginWindow.setObjectName("LoginWindow")
         LoginWindow.resize(656, 590)
         LoginWindow.setStyleSheet("background-color:rgba(16,16,16,255);\n"
-"border radius:20px;")
+"border radius:30px;")
         self.centralwidget = QtWidgets.QWidget(LoginWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.usrname = QtWidgets.QLineEdit(self.centralwidget)
@@ -56,7 +56,7 @@ class Ui_LoginWindow(object):
 "color:rgb(135,60,0);\n"
 "border-radius:20px;\n"
 "\n"
-"Qpushbutton#b1:pressed{\n"
+"Qpushbutton#loginButton:pressed{\n"
 "background-color:rgb(255,255,16);\n"
 "}\n"
 "\n"
@@ -69,6 +69,35 @@ class Ui_LoginWindow(object):
         self.label.setFont(font)
         self.label.setStyleSheet("color:rgb(255,191,16);")
         self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(180, 500, 261, 20))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("color:white;")
+        self.label_2.setObjectName("label_2")
+        self.registerButton = QtWidgets.QPushButton(self.centralwidget)
+        self.registerButton.setGeometry(QtCore.QRect(400, 500, 121, 29))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        self.registerButton.setFont(font)
+        self.registerButton.setStyleSheet("QPushButton#registerButton{\n"
+"background-color:rgb(255,191,16);\n"
+"color:rgb(135,60,0);\n"
+"border-radius:5px;\n"
+"}\n"
+"\n"
+"QPushButton#registerButton:pressed{\n"
+"background-color:rgb(255,225,16);\n"
+"}\n"
+"\n"
+"QPushButton#registerButton:hover{\n"
+"background-color:rgb(255,225,16);\n"
+"}\n"
+"")
+        self.registerButton.setObjectName("registerButton")
         LoginWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(LoginWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 656, 26))
@@ -91,6 +120,8 @@ class Ui_LoginWindow(object):
         self.password.setPlaceholderText(_translate("LoginWindow", "Enter the password"))
         self.loginButton.setText(_translate("LoginWindow", "L o g i n"))
         self.label.setText(_translate("LoginWindow", ""))
+        self.label_2.setText(_translate("LoginWindow", "Don\'t have an account?"))
+        self.registerButton.setText(_translate("LoginWindow", "R e g i s t e r"))
         self.menulogin.setTitle(_translate("LoginWindow", "login"))
 
 
