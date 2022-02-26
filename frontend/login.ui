@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color:rgba(16,16,16,255);
-border radius:20px;</string>
+border radius:30px;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="usrname">
@@ -95,7 +95,7 @@ padding-bottom:3px</string>
 color:rgb(135,60,0);
 border-radius:20px;
 
-Qpushbutton#b1:pressed{
+Qpushbutton#loginButton:pressed{
 background-color:rgb(255,255,16);
 }
 
@@ -141,11 +141,14 @@ background-color:rgb(255,255,16);
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;</string>
+    </property>
     <property name="text">
      <string>Don't have an account?</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="b2">
+   <widget class="QPushButton" name="registerButton">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -161,13 +164,17 @@ background-color:rgb(255,255,16);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton#b2{
+     <string notr="true">QPushButton#registerButton{
 background-color:rgb(255,191,16);
 color:rgb(135,60,0);
 border-radius:5px;
 }
 
-QPushButton#b2:pressed{
+QPushButton#registerButton:pressed{
+background-color:rgb(255,225,16);
+}
+
+QPushButton#registerButton:hover{
 background-color:rgb(255,225,16);
 }
 </string>
@@ -183,7 +190,7 @@ background-color:rgb(255,225,16);
      <x>0</x>
      <y>0</y>
      <width>656</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menulogin">
