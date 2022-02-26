@@ -6,22 +6,21 @@ import sys
 
 app = QtWidgets.QApplication(sys.argv)
 
-ui = Login()
+login = Login()
 lf = LoginForm()
 
-def changeLabel():
-    # ui.changeWindow.clicked.connect(changeFrame)
-    ui.show()
-    lf.hide()
+def loginButtonAction():
+    usr = login.usrname.text()
+    psk = login.password.text()
+    if (usr=='Rushi' and psk=='Rushi123'):
+        login.hide()
+        lf.show()
+    else:
+        login.loginError()
+    
 
-def changeFrame():
-    print('You have clicked change form')
-    lf.addButton.clicked.connect(changeLabel)
-    lf.show()
-    ui.hide()
-
-ui.loginButton.clicked.connect(changeFrame)
-ui.show()
+login.loginButton.clicked.connect(loginButtonAction)
+login.show()
 
 
 sys.exit(app.exec_())
