@@ -23,6 +23,7 @@ def registerButtonAction():
 
 login.loginButton.clicked.connect(loginButtonAction)
 login.registerButton.clicked.connect(registerButtonAction)
+custRegister.registerButton.clicked.connect(custRegister.register)
 login.show()
 
 
