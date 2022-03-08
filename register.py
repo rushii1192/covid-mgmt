@@ -8,5 +8,14 @@ class CustomerRegister(QtWidgets.QMainWindow,Ui_RegisterWindow):
         self.setupUi(self)
         # self.loginButton.clicked.connect(self.loginButtonAction)
         # self.changeWindow.clicked.connect(self.changeFrame)
+
+    def register(self):
+        fname = self.firstName.text()
+        lname = self.lastName.text()
+        email = self.email.text()
+        mobile = self.mobile.text()
+        psk = self.password.text()
+        address = self.address.text()
+        print(f'{fname},{lname},{email},{mobile},{psk},{address}')
     
     
