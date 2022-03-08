@@ -33,7 +33,7 @@ class Ui_RegisterWindow(object):
 "")
         self.firstName.setObjectName("firstName")
         self.lastName = QtWidgets.QLineEdit(self.centralwidget)
-        self.lastName.setGeometry(QtCore.QRect(330, 210, 221, 40))
+        self.lastName.setGeometry(QtCore.QRect(330, 220, 221, 40))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.lastName.setFont(font)
