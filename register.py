@@ -1,5 +1,6 @@
 from frontend.custRegisterWindow import Ui_RegisterWindow
 from PyQt5 import QtWidgets
+from backend import DatabaseConnection
 
 class CustomerRegister(QtWidgets.QMainWindow,Ui_RegisterWindow):
     def __init__(self) -> None:
@@ -16,6 +17,17 @@ class CustomerRegister(QtWidgets.QMainWindow,Ui_RegisterWindow):
         mobile = self.mobile.text()
         psk = self.password.text()
         address = self.address.text()
-        print(f'{fname},{lname},{email},{mobile},{psk},{address}')
+        dc = DatabaseConnection()
+        cursor = dc.cursor()
+        cursor.execute(f"INSERT INTO patient VALUES ('{fname}','{lname}',{mobile},'{email}','{address}','{psk}')")
+        dc.commit()
+        
+        msg = QtWidgets.QMessageBox(self)
+        msg.setWindowTitle('Successfull')
+        msg.setText(f'You have succesfully registered.\n{email} is your username.')
+        msg.setStyleSheet('color:white')
+        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        msg.exec_()
+        
     
     
