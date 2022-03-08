@@ -116,13 +116,13 @@ class Ui_RegisterWindow(object):
 "padding-bottom-3px\n"
 "")
         self.address.setObjectName("address")
-        self.loginButton = QtWidgets.QPushButton(self.centralwidget)
-        self.loginButton.setGeometry(QtCore.QRect(240, 640, 161, 41))
+        self.registerButton = QtWidgets.QPushButton(self.centralwidget)
+        self.registerButton.setGeometry(QtCore.QRect(240, 640, 161, 41))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
-        self.loginButton.setFont(font)
-        self.loginButton.setStyleSheet("background-color:rgb(255,191,16);\n"
+        self.registerButton.setFont(font)
+        self.registerButton.setStyleSheet("background-color:rgb(255,191,16);\n"
 "color:rgb(135,60,0);\n"
 "border-radius:20px;\n"
 "\n"
@@ -131,7 +131,7 @@ class Ui_RegisterWindow(object):
 "}\n"
 "\n"
 "")
-        self.loginButton.setObjectName("loginButton")
+        self.registerButton.setObjectName("registerButton")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(270, 50, 151, 131))
         self.label.setText("")
@@ -159,7 +159,7 @@ class Ui_RegisterWindow(object):
         self.password.setPlaceholderText(_translate("RegisterWindow", "Enter the password"))
         self.cnfrmPassword.setPlaceholderText(_translate("RegisterWindow", "Confirm the password"))
         self.address.setPlaceholderText(_translate("RegisterWindow", "Enter your address"))
-        self.loginButton.setText(_translate("RegisterWindow", "Register"))
+        self.registerButton.setText(_translate("RegisterWindow", "Register"))
 
 
 if __name__ == "__main__":
