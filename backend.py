@@ -11,8 +11,8 @@ class DatabaseConnection(object):
             user='sql6468008',
             password='eqHRn7SbqA'
         )
-        print("connected")
-        print(type(conn))
+        # print("connected")
+        # print(type(conn))
         return conn
         
     
