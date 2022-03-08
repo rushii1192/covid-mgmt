@@ -1,5 +1,5 @@
 from Login import Login
-from form import LoginForm
+from register import CustomerRegister
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 
@@ -7,19 +7,22 @@ import sys
 app = QtWidgets.QApplication(sys.argv)
 
 login = Login()
-lf = LoginForm()
+custRegister = CustomerRegister()
 
 def loginButtonAction():
     usr = login.usrname.text()
     psk = login.password.text()
     if (usr=='Rushi' and psk=='Rushi123'):
         login.hide()
-        lf.show()
     else:
         login.loginError()
     
+def registerButtonAction():
+    login.hide()
+    custRegister.show()
 
 login.loginButton.clicked.connect(loginButtonAction)
+login.registerButton.clicked.connect(registerButtonAction)
 login.show()
 
 
