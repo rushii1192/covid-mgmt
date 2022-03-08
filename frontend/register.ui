@@ -217,7 +217,7 @@ padding-bottom-3px
      <string>Enter your address</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="loginButton">
+   <widget class="QPushButton" name="registerButton">
     <property name="geometry">
      <rect>
       <x>240</x>
