@@ -14,9 +14,6 @@ class DatabaseConnection(object):
         print("connected")
         print(type(conn))
         return conn
-
-    def __del__(self):
-        self.conn.close()
-
+        
+    
 #Exception Handling
-dc = DatabaseConnection()
