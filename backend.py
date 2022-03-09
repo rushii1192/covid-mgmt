@@ -14,6 +14,16 @@ class DatabaseConnection(object):
         # print("connected")
         # print(type(conn))
         return conn
+
+# email sender class
+class EmailSender(object):
+    def __init__(self):
+        self.server = smtplib.SMTP_SSL("smtp.gmail.com")
+        self.server.login("rushikeshborakhede@student.sfit.ac.in", "Rushi_1192#")
+
+    def sendEmail(self,receiver,content):
+        self.server.sendmail('rushikeshborakhede@student.sfit.ac.in',receiver,content)
+
         
     
 #Exception Handling
