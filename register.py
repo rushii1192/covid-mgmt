@@ -1,6 +1,7 @@
 from frontend.custRegisterWindow import Ui_RegisterWindow
 from PyQt5 import QtWidgets
-from backend import DatabaseConnection
+from backend import DatabaseConnection, EmailSender
+from email.message import EmailMessage
 
 class CustomerRegister(QtWidgets.QMainWindow,Ui_RegisterWindow):
     def __init__(self) -> None:
@@ -22,6 +23,12 @@ class CustomerRegister(QtWidgets.QMainWindow,Ui_RegisterWindow):
         cursor.execute(f"INSERT INTO patient VALUES ('{fname}','{lname}',{mobile},'{email}','{address}','{psk}')")
         dc.commit()
         
+        es = EmailSender()
+        msg = EmailMessage()
+        msg['subject'] = 'Query from customer'
+        msg.set_content(f'Hi you are welcomed to our system.')
+        es.sendEmail(email,str(msg))
+
         msg = QtWidgets.QMessageBox(self)
         msg.setWindowTitle('Successfull')
         msg.setText(f'You have succesfully registered.\n{email} is your username.')
