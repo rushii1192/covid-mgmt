@@ -1,3 +1,3 @@
 {
-    "files": ["widget.py","frontend/login.ui","frontend/register.ui","TrailForm.ui.qml","frontend/frontend-images.qrc","frontend/mainwindow.ui","frontend/dialog.ui","form.ui","dialog.ui","Trail.qml","frontend/CustomerDashboard.ui"]
+    "files": ["TrailForm.ui.qml","widget.py","frontend/CustomerDashboard.ui","frontend/register.ui","Trail.qml","frontend/frontend-images.qrc","dialog.ui","form.ui","frontend/dialog.ui","frontend/login.ui","frontend/mainwindow.ui","frontend/doctordashboard.ui"]
 }
