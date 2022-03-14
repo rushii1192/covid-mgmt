@@ -43,7 +43,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="firstname">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -60,7 +60,7 @@ border-radius: 25px;</string>
      <string>Enter Your First Name</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="mobile">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -77,7 +77,7 @@ border-radius: 25px;</string>
      <string>Enter Your mobile</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="email">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -94,7 +94,7 @@ border-radius: 25px;</string>
      <string>Enter Your mail</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="password">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -106,6 +106,9 @@ border-radius: 25px;</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(216, 216, 216);
 border-radius: 25px;</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
     </property>
     <property name="placeholderText">
      <string>Enter your password</string>
@@ -128,7 +131,7 @@ border-radius: 25px;</string>
      <string>Enter Your Last Name</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_7">
+   <widget class="QLineEdit" name="cnfrmPassword">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -141,11 +144,14 @@ border-radius: 25px;</string>
      <string notr="true">background-color: rgb(216, 216, 216);
 border-radius: 25px;</string>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
     <property name="placeholderText">
      <string>Confirm password</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_8">
+   <widget class="QLineEdit" name="education">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -162,7 +168,7 @@ border-radius: 25px;</string>
      <string>Education</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_9">
+   <widget class="QLineEdit" name="specialization">
     <property name="geometry">
      <rect>
       <x>740</x>
@@ -179,7 +185,7 @@ border-radius: 25px;</string>
      <string>Specialization</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_10">
+   <widget class="QLineEdit" name="address">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -196,7 +202,7 @@ border-radius: 25px;</string>
      <string>Enter Your Address</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="registerButton">
     <property name="geometry">
      <rect>
       <x>650</x>
