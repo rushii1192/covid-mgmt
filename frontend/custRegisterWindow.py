@@ -14,132 +14,113 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_RegisterWindow(object):
     def setupUi(self, RegisterWindow):
         RegisterWindow.setObjectName("RegisterWindow")
-        RegisterWindow.resize(665, 732)
-        RegisterWindow.setStyleSheet("background-color: rgb(0, 0, 0);")
+        RegisterWindow.resize(621, 732)
+        RegisterWindow.setStyleSheet("background-color:rgb(255,255,255);\n"
+"border-radius:10px;\n"
+"")
         self.centralwidget = QtWidgets.QWidget(RegisterWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.firstName = QtWidgets.QLineEdit(self.centralwidget)
-        self.firstName.setGeometry(QtCore.QRect(80, 220, 221, 40))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.firstName.setFont(font)
-        self.firstName.setStyleSheet("background-color:rgba(47,49,52,200);\n"
-"color:rgb(255,255,255);\n"
-"border-radius:20px;\n"
-"padding-left:10px;\n"
-"border:1px solid rgba(f,f,f,f);\n"
-"border-bottom-color:rgba(46,82,101,255);\n"
-"padding-bottom-3px\n"
-"")
-        self.firstName.setObjectName("firstName")
-        self.lastName = QtWidgets.QLineEdit(self.centralwidget)
-        self.lastName.setGeometry(QtCore.QRect(330, 220, 221, 40))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.lastName.setFont(font)
-        self.lastName.setStyleSheet("background-color:rgba(47,49,52,200);\n"
-"color:rgb(255,255,255);\n"
-"border-radius:20px;\n"
-"padding-left:10px;\n"
-"border:1px solid rgba(f,f,f,f);\n"
-"border-bottom-color:rgba(46,82,101,255);\n"
-"padding-bottom-3px\n"
-"")
-        self.lastName.setObjectName("lastName")
-        self.email = QtWidgets.QLineEdit(self.centralwidget)
-        self.email.setGeometry(QtCore.QRect(80, 280, 481, 40))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.email.setFont(font)
-        self.email.setStyleSheet("background-color:rgba(47,49,52,200);\n"
-"color:rgb(255,255,255);\n"
-"border-radius:20px;\n"
-"padding-left:10px;\n"
-"border:1px solid rgba(f,f,f,f);\n"
-"border-bottom-color:rgba(46,82,101,255);\n"
-"padding-bottom-3px\n"
-"")
-        self.email.setObjectName("email")
-        self.mobile = QtWidgets.QLineEdit(self.centralwidget)
-        self.mobile.setGeometry(QtCore.QRect(80, 340, 231, 40))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.mobile.setFont(font)
-        self.mobile.setStyleSheet("background-color:rgba(47,49,52,200);\n"
-"color:rgb(255,255,255);\n"
-"border-radius:20px;\n"
-"padding-left:10px;\n"
-"border:1px solid rgba(f,f,f,f);\n"
-"border-bottom-color:rgba(46,82,101,255);\n"
-"padding-bottom-3px\n"
-"")
-        self.mobile.setObjectName("mobile")
-        self.password = QtWidgets.QLineEdit(self.centralwidget)
-        self.password.setGeometry(QtCore.QRect(80, 400, 311, 40))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.password.setFont(font)
-        self.password.setStyleSheet("background-color:rgba(47,49,52,200);\n"
-"color:rgb(255,255,255);\n"
-"border-radius:20px;\n"
-"padding-left:10px;\n"
-"border:1px solid rgba(0,0,0);\n"
-"border-bottom-color:rgba(46,82,101,255);\n"
-"padding-bottom:3px")
-        self.password.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.password.setObjectName("password")
-        self.cnfrmPassword = QtWidgets.QLineEdit(self.centralwidget)
-        self.cnfrmPassword.setGeometry(QtCore.QRect(80, 460, 311, 40))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.cnfrmPassword.setFont(font)
-        self.cnfrmPassword.setStyleSheet("background-color:rgba(47,49,52,200);\n"
-"color:rgb(255,255,255);\n"
-"border-radius:20px;\n"
-"padding-left:10px;\n"
-"border:1px solid rgba(0,0,0);\n"
-"border-bottom-color:rgba(46,82,101,255);\n"
-"padding-bottom:3px")
-        self.cnfrmPassword.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.cnfrmPassword.setObjectName("cnfrmPassword")
-        self.address = QtWidgets.QLineEdit(self.centralwidget)
-        self.address.setGeometry(QtCore.QRect(80, 520, 521, 101))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.address.setFont(font)
-        self.address.setStyleSheet("background-color:rgba(47,49,52,200);\n"
-"color:rgb(255,255,255);\n"
-"border-radius:20px;\n"
-"padding-left:10px;\n"
-"border:1px solid rgba(f,f,f,f);\n"
-"border-bottom-color:rgba(46,82,101,255);\n"
-"padding-bottom-3px\n"
-"")
-        self.address.setObjectName("address")
         self.registerButton = QtWidgets.QPushButton(self.centralwidget)
-        self.registerButton.setGeometry(QtCore.QRect(240, 640, 161, 41))
+        self.registerButton.setGeometry(QtCore.QRect(90, 630, 171, 41))
         font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
         self.registerButton.setFont(font)
-        self.registerButton.setStyleSheet("background-color:rgb(255,191,16);\n"
-"color:rgb(135,60,0);\n"
-"border-radius:20px;\n"
-"\n"
-"Qpushbutton#loginButton:pressed{\n"
-"background-color:rgb(255,255,16);\n"
-"}\n"
-"\n"
+        self.registerButton.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(0, 0, 127);\n"
+"border-radius:5px;\n"
+"font: 16pt \"Segoe UI\";\n"
 "")
         self.registerButton.setObjectName("registerButton")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(20, 210, 51, 51))
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap("frontend\\images/user_45px.png"))
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(20, 270, 51, 51))
+        self.label_3.setText("")
+        self.label_3.setPixmap(QtGui.QPixmap("frontend\\images/gmail_logo_45px.png"))
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(20, 330, 51, 51))
+        self.label_4.setText("")
+        self.label_4.setPixmap(QtGui.QPixmap("frontend\\images/add_phone_45px.png"))
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(20, 390, 51, 51))
+        self.label_5.setText("")
+        self.label_5.setPixmap(QtGui.QPixmap("frontend\\images/password_45px.png"))
+        self.label_5.setObjectName("label_5")
+        self.label_6 = QtWidgets.QLabel(self.centralwidget)
+        self.label_6.setGeometry(QtCore.QRect(20, 450, 51, 51))
+        self.label_6.setText("")
+        self.label_6.setPixmap(QtGui.QPixmap("frontend\\images/password_reset_45px.png"))
+        self.label_6.setObjectName("label_6")
+        self.label_7 = QtWidgets.QLabel(self.centralwidget)
+        self.label_7.setGeometry(QtCore.QRect(20, 520, 51, 51))
+        self.label_7.setText("")
+        self.label_7.setPixmap(QtGui.QPixmap("frontend\\images/address_45px.png"))
+        self.label_7.setObjectName("label_7")
+        self.firstName = QtWidgets.QLineEdit(self.centralwidget)
+        self.firstName.setGeometry(QtCore.QRect(80, 210, 171, 51))
+        self.firstName.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 25px;")
+        self.firstName.setObjectName("firstName")
+        self.lastName = QtWidgets.QLineEdit(self.centralwidget)
+        self.lastName.setGeometry(QtCore.QRect(270, 210, 171, 51))
+        self.lastName.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 25px;")
+        self.lastName.setObjectName("lastName")
+        self.mobile = QtWidgets.QLineEdit(self.centralwidget)
+        self.mobile.setGeometry(QtCore.QRect(80, 330, 261, 51))
+        self.mobile.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 25px;")
+        self.mobile.setObjectName("mobile")
+        self.email = QtWidgets.QLineEdit(self.centralwidget)
+        self.email.setGeometry(QtCore.QRect(80, 270, 371, 51))
+        self.email.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 25px;")
+        self.email.setObjectName("email")
+        self.password = QtWidgets.QLineEdit(self.centralwidget)
+        self.password.setGeometry(QtCore.QRect(80, 390, 271, 51))
+        self.password.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 25px;")
+        self.password.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.password.setObjectName("password")
+        self.address = QtWidgets.QLineEdit(self.centralwidget)
+        self.address.setGeometry(QtCore.QRect(80, 510, 391, 81))
+        self.address.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 25px;")
+        self.address.setObjectName("address")
+        self.cnfrmPassword = QtWidgets.QLineEdit(self.centralwidget)
+        self.cnfrmPassword.setGeometry(QtCore.QRect(80, 450, 271, 51))
+        self.cnfrmPassword.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 25px;")
+        self.cnfrmPassword.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.cnfrmPassword.setObjectName("cnfrmPassword")
+        self.doctorRegisterButton = QtWidgets.QPushButton(self.centralwidget)
+        self.doctorRegisterButton.setGeometry(QtCore.QRect(390, 630, 191, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        self.doctorRegisterButton.setFont(font)
+        self.doctorRegisterButton.setStyleSheet("color: rgb(0, 0, 127);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius:5px;\n"
+"font: 10pt \"Segoe UI\";\n"
+"")
+        self.doctorRegisterButton.setObjectName("doctorRegisterButton")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(270, 50, 151, 131))
+        self.label.setGeometry(QtCore.QRect(210, 20, 161, 161))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("frontend\\images/register.png"))
+        self.label.setPixmap(QtGui.QPixmap("frontend\\images/medical-logo.jpg"))
         self.label.setObjectName("label")
         RegisterWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(RegisterWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 665, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 621, 26))
         self.menubar.setObjectName("menubar")
         RegisterWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(RegisterWindow)
@@ -152,14 +133,15 @@ class Ui_RegisterWindow(object):
     def retranslateUi(self, RegisterWindow):
         _translate = QtCore.QCoreApplication.translate
         RegisterWindow.setWindowTitle(_translate("RegisterWindow", "RegisterWindow"))
-        self.firstName.setPlaceholderText(_translate("RegisterWindow", "Enter First Name"))
-        self.lastName.setPlaceholderText(_translate("RegisterWindow", "Enter Last Name"))
-        self.email.setPlaceholderText(_translate("RegisterWindow", "Enter Email"))
-        self.mobile.setPlaceholderText(_translate("RegisterWindow", "Enter Mobile"))
-        self.password.setPlaceholderText(_translate("RegisterWindow", "Enter the password"))
-        self.cnfrmPassword.setPlaceholderText(_translate("RegisterWindow", "Confirm the password"))
-        self.address.setPlaceholderText(_translate("RegisterWindow", "Enter your address"))
         self.registerButton.setText(_translate("RegisterWindow", "Register"))
+        self.firstName.setPlaceholderText(_translate("RegisterWindow", "Enter Your First Name"))
+        self.lastName.setPlaceholderText(_translate("RegisterWindow", "Enter Your Last Name"))
+        self.mobile.setPlaceholderText(_translate("RegisterWindow", "Enter Your mobile"))
+        self.email.setPlaceholderText(_translate("RegisterWindow", "Enter Your mail"))
+        self.password.setPlaceholderText(_translate("RegisterWindow", "Enter your password"))
+        self.address.setPlaceholderText(_translate("RegisterWindow", "Enter Your Address"))
+        self.cnfrmPassword.setPlaceholderText(_translate("RegisterWindow", "Confirm password"))
+        self.doctorRegisterButton.setText(_translate("RegisterWindow", "Register as doctor"))
 
 
 if __name__ == "__main__":
