@@ -1,4 +1,5 @@
 from frontend.custRegisterWindow import Ui_RegisterWindow
+from frontend.doctorRegisterWindow import Ui_DoctorRegisterWindow
 from PyQt5 import QtWidgets
 from backend import DatabaseConnection, EmailSender
 from email.message import EmailMessage
@@ -32,9 +33,34 @@ class CustomerRegister(QtWidgets.QMainWindow,Ui_RegisterWindow):
         msg = QtWidgets.QMessageBox(self)
         msg.setWindowTitle('Successfull')
         msg.setText(f'You have succesfully registered.\n{email} is your username.')
-        msg.setStyleSheet('color:white')
+        msg.setStyleSheet('color:black')
         msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
         msg.exec_()
-        
-    
+
+class DoctorRegister(QtWidgets.QMainWindow,Ui_DoctorRegisterWindow):
+    def __init__(self) -> None:
+        super().__init__()
+        self.setupUi(self)
+
+    def register(self):
+        fname = self.firstname.text()
+        lname = self.lastName.text()
+        mobile = self.mobile.text()
+        email = self.email.text()
+        address = self.address.text()
+        psk = self.password.text()
+        edu = self.password.text()
+        spec = self.specialization.text()
+
+        dc = DatabaseConnection()
+        cursor = dc.cursor()
+        cursor.execute(f"INSERT INTO doctor VALUES ('{fname}','{lname}',{mobile},'{email}','{address}','{psk}','{edu}','{spec}');")
+        dc.commit()
+
+        msg = QtWidgets.QMessageBox(self)
+        msg.setWindowTitle('Successfull')
+        msg.setText(f'You have succesfully registered.\n{email} is your username.')
+        msg.setStyleSheet('color:black')
+        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        msg.exec_()
     
