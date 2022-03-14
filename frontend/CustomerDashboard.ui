@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(161, 198, 185);
+   <string notr="true">background-color:rgb(255, 255, 255);
 border-radius:15px;
 
 
@@ -31,7 +31,7 @@ border-radius:15px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(255, 255,255);
+     <string notr="true">background-color:rgb(161, 198, 185);
 color:rgb(255,255,255);
 border-radius:10px;
 padding-left:10px;
@@ -53,7 +53,7 @@ padding-bottom:10px</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(255, 255,255);</string>
+     <string notr="true">background-color:rgb(161, 198, 185);</string>
     </property>
     <property name="text">
      <string/>
@@ -72,7 +72,7 @@ padding-bottom:10px</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(255, 255,255);</string>
+     <string notr="true">background-color:rgb(161, 198, 185);</string>
     </property>
     <property name="text">
      <string/>
@@ -91,7 +91,7 @@ padding-bottom:10px</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(255, 255,255);</string>
+     <string notr="true">background-color:rgb(161, 198, 185);</string>
     </property>
     <property name="text">
      <string/>
@@ -125,8 +125,8 @@ border-colour:rgb(255,255,255);
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>170</y>
-      <width>181</width>
+      <y>180</y>
+      <width>161</width>
       <height>41</height>
      </rect>
     </property>
@@ -136,7 +136,8 @@ border-colour:rgb(255,255,255);
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-radius:10px;
+     <string notr="true">background-color:rgb(161, 198, 185);
+border-radius:10px;
 padding-left:10px;
 padding-bottom:10px</string>
     </property>
@@ -149,7 +150,7 @@ padding-bottom:10px</string>
      <rect>
       <x>70</x>
       <y>320</y>
-      <width>181</width>
+      <width>91</width>
       <height>41</height>
      </rect>
     </property>
@@ -159,7 +160,8 @@ padding-bottom:10px</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-radius:10px;
+     <string notr="true">background-color:rgb(161, 198, 185);
+border-radius:10px;
 padding-left:10px;
 padding-bottom:10px</string>
     </property>
@@ -170,9 +172,9 @@ padding-bottom:10px</string>
    <widget class="QPushButton" name="consultation">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>250</y>
-      <width>181</width>
+      <x>60</x>
+      <y>260</y>
+      <width>161</width>
       <height>41</height>
      </rect>
     </property>
@@ -182,7 +184,8 @@ padding-bottom:10px</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-radius:10px;
+     <string notr="true">background-color:rgb(161, 198, 185);
+border-radius:10px;
 padding-left:10px;
 padding-bottom:10px</string>
     </property>
