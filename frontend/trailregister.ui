@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>RegisterWindow</class>
- <widget class="QMainWindow" name="RegisterWindow">
+ <class>DoctorRegisterWindow</class>
+ <widget class="QMainWindow" name="DoctorRegisterWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -114,7 +114,7 @@ border-radius: 25px;</string>
      <string>Enter your password</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="lastName">
     <property name="geometry">
      <rect>
       <x>760</x>
@@ -315,6 +315,22 @@ font: 16pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="pixmap">
      <pixmap>images/school_45px.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>510</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>images/address_45px.png</pixmap>
     </property>
    </widget>
   </widget>
