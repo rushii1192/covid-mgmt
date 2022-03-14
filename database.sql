@@ -14,7 +14,7 @@ CREATE TABLE doctor (
     Email VARCHAR(100),
     Address VARCHAR(300),
     Password VARCHAR(15),
-    College VARCHAR(75),
+    /*College VARCHAR(75),*/
     Education VARCHAR(10),
     Specialization VARCHAR(50)
 );
@@ -24,3 +24,6 @@ ALTER TABLE patient
 
 ALTER TABLE doctor
     ADD CONSTRAINT Pk_Doctor PRIMARY KEY (Email);
+
+ALTER TABLE doctor
+    DROP COLUMN College;
