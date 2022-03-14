@@ -24,5 +24,9 @@ class Login(QtWidgets.QMainWindow,Ui_LoginWindow):
         cursor = dc.cursor()
         cursor.execute(f"SELECT * FROM patient WHERE Email = '{self.usrname.text()}' and Password = '{self.password.text()}'")
         if cursor.fetchone():
-            return True
-        return False
+            return 1
+        else:
+            cursor.execute(f"SELECT * FROM doctor WHERE Email = '{self.usrname.text()}' and Password = '{self.password.text()}'")
+            if cursor.fetchone():
+                return 2
+            return 0
