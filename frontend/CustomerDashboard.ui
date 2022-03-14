@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>CustomerDashboardWindow</class>
+ <widget class="QMainWindow" name="CustomerDashboardWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>1043</width>
-    <height>717</height>
+    <height>630</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,16 +27,13 @@ border-radius:15px;
       <x>0</x>
       <y>0</y>
       <width>311</width>
-      <height>661</height>
+      <height>681</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color:rgb(161, 198, 185);
 color:rgb(255,255,255);
-border-radius:10px;
 padding-left:10px;
-border:2px solid rgba(0,0,0);
-border-color:rgba(10,82,101,255);
 padding-bottom:10px</string>
     </property>
     <property name="text">
