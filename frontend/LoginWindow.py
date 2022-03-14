@@ -15,7 +15,7 @@ class Ui_LoginWindow(object):
     def setupUi(self, LoginWindow):
         LoginWindow.setObjectName("LoginWindow")
         LoginWindow.resize(656, 590)
-        LoginWindow.setStyleSheet("background-color:rgba(16,16,16,255);\n"
+        LoginWindow.setStyleSheet("background-color:rgb(255,255,255);\n"
 "border radius:30px;")
         self.centralwidget = QtWidgets.QWidget(LoginWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -24,12 +24,9 @@ class Ui_LoginWindow(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.usrname.setFont(font)
-        self.usrname.setStyleSheet("background-color:rgba(47,49,52,200);\n"
-"color:rgb(255,255,255);\n"
+        self.usrname.setStyleSheet("background-color:rgb(216,216,216);\n"
 "border-radius:20px;\n"
 "padding-left:10px;\n"
-"border:1px solid rgba(0,0,0);\n"
-"border-bottom-color:rgba(46,82,101,255);\n"
 "padding-bottom:3px")
         self.usrname.setObjectName("usrname")
         self.password = QtWidgets.QLineEdit(self.centralwidget)
@@ -37,12 +34,9 @@ class Ui_LoginWindow(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.password.setFont(font)
-        self.password.setStyleSheet("background-color:rgba(47,49,52,200);\n"
-"color:rgb(255,255,255);\n"
+        self.password.setStyleSheet("background-color:rgb(216,216,216);\n"
 "border-radius:20px;\n"
 "padding-left:10px;\n"
-"border:1px solid rgba(0,0,0);\n"
-"border-bottom-color:rgba(46,82,101,255);\n"
 "padding-bottom:3px")
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.password.setObjectName("password")
@@ -52,52 +46,48 @@ class Ui_LoginWindow(object):
         font.setPointSize(10)
         font.setBold(True)
         self.loginButton.setFont(font)
-        self.loginButton.setStyleSheet("background-color:rgb(255,191,16);\n"
-"color:rgb(135,60,0);\n"
+        self.loginButton.setStyleSheet("background-color:rgb(0,0,127);\n"
+"color:rgb(255,255,255);\n"
 "border-radius:20px;\n"
 "\n"
-"Qpushbutton#loginButton:pressed{\n"
-"background-color:rgb(255,255,16);\n"
-"}\n"
+"\n"
 "\n"
 "")
         self.loginButton.setObjectName("loginButton")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(280, 80, 421, 121))
-        font = QtGui.QFont()
-        font.setPointSize(60)
-        self.label.setFont(font)
-        self.label.setStyleSheet("color:rgb(255,191,16);")
-        self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(180, 500, 261, 20))
+        self.label_2.setGeometry(QtCore.QRect(150, 500, 201, 20))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
         self.label_2.setFont(font)
-        self.label_2.setStyleSheet("color:white;")
+        self.label_2.setStyleSheet("color:rgb(0,0,127);")
         self.label_2.setObjectName("label_2")
         self.registerButton = QtWidgets.QPushButton(self.centralwidget)
-        self.registerButton.setGeometry(QtCore.QRect(400, 500, 121, 29))
+        self.registerButton.setGeometry(QtCore.QRect(380, 490, 121, 29))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
         self.registerButton.setFont(font)
         self.registerButton.setStyleSheet("QPushButton#registerButton{\n"
-"background-color:rgb(255,191,16);\n"
-"color:rgb(135,60,0);\n"
+"background-color:rgb(0,0,127);\n"
+"color:rgb(255,255,255);\n"
 "border-radius:5px;\n"
 "}\n"
 "\n"
 "QPushButton#registerButton:pressed{\n"
-"background-color:rgb(255,225,16);\n"
+"background-color:rgb(0,0,120);\n"
 "}\n"
 "\n"
 "QPushButton#registerButton:hover{\n"
-"background-color:rgb(255,225,16);\n"
+"background-color:rgb(0,0,120);\n"
 "}\n"
 "")
         self.registerButton.setObjectName("registerButton")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(240, 40, 161, 161))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap("frontend\\images/medical-logo.jpg"))
+        self.label.setObjectName("label")
         LoginWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(LoginWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 656, 26))
@@ -119,7 +109,6 @@ class Ui_LoginWindow(object):
         self.usrname.setPlaceholderText(_translate("LoginWindow", "Enter the username"))
         self.password.setPlaceholderText(_translate("LoginWindow", "Enter the password"))
         self.loginButton.setText(_translate("LoginWindow", "L o g i n"))
-        self.label.setText(_translate("LoginWindow", ""))
         self.label_2.setText(_translate("LoginWindow", "Don\'t have an account?"))
         self.registerButton.setText(_translate("LoginWindow", "R e g i s t e r"))
         self.menulogin.setTitle(_translate("LoginWindow", "login"))
