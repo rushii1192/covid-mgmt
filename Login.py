@@ -1,7 +1,6 @@
 from frontend.LoginWindow import Ui_LoginWindow
-from PyQt5 import QtCore, QtGui, QtWidgets
-from form import LoginForm
-import sys
+from PyQt5 import QtWidgets
+from backend import DatabaseConnection
 
 class Login(QtWidgets.QMainWindow,Ui_LoginWindow):
     def __init__(self) -> None:
@@ -19,4 +18,11 @@ class Login(QtWidgets.QMainWindow,Ui_LoginWindow):
         msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
         msg.exec_()
         # ui.setupUi(Dialog)
- 
+
+    def login(self):
+        dc = DatabaseConnection()
+        cursor = dc.cursor()
+        cursor.execute(f"SELECT * FROM patient WHERE Email = '{self.usrname.text()}' and Password = '{self.password.text()}'")
+        if cursor.fetchone():
+            return True
+        return False
