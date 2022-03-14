@@ -59,7 +59,8 @@ class LoginForm(QtWidgets.QMainWindow,Ui_LoginWindow):
         super().__init__()
         self.setupUi(self)   
         self.clearButton.clicked.connect(self.clickedMe)  
-        self.addButton.clicked.connect(self.changeLabel)    
+        self.addButton.clicked.connect(self.changeLabel) 
+        # self.label.clicked.connect(self.labelClickCheck)
         print('Hello world I am imported from form')
 
     def clickedMe(self):
@@ -68,6 +69,9 @@ class LoginForm(QtWidgets.QMainWindow,Ui_LoginWindow):
         
     def changeLabel(self):
         self.label.setText(self.t1.text())
+
+    def labelClickCheck(self):
+        print('Label chevk')
 
 if __name__ == "__main__":
     import sys
