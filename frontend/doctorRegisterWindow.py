@@ -11,12 +11,12 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_RegisterWindow(object):
-    def setupUi(self, RegisterWindow):
-        RegisterWindow.setObjectName("RegisterWindow")
-        RegisterWindow.resize(967, 740)
-        RegisterWindow.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.centralwidget = QtWidgets.QWidget(RegisterWindow)
+class Ui_DoctorRegisterWindow(object):
+    def setupUi(self, DoctorRegisterWindow):
+        DoctorRegisterWindow.setObjectName("DoctorRegisterWindow")
+        DoctorRegisterWindow.resize(967, 740)
+        DoctorRegisterWindow.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.centralwidget = QtWidgets.QWidget(DoctorRegisterWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(0, 0, 481, 681))
@@ -47,11 +47,11 @@ class Ui_RegisterWindow(object):
 "border-radius: 25px;")
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.password.setObjectName("password")
-        self.lineEdit_6 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_6.setGeometry(QtCore.QRect(760, 70, 171, 51))
-        self.lineEdit_6.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+        self.lastName = QtWidgets.QLineEdit(self.centralwidget)
+        self.lastName.setGeometry(QtCore.QRect(760, 70, 171, 51))
+        self.lastName.setStyleSheet("background-color: rgb(216, 216, 216);\n"
 "border-radius: 25px;")
-        self.lineEdit_6.setObjectName("lineEdit_6")
+        self.lastName.setObjectName("lastName")
         self.cnfrmPassword = QtWidgets.QLineEdit(self.centralwidget)
         self.cnfrmPassword.setGeometry(QtCore.QRect(560, 350, 271, 51))
         self.cnfrmPassword.setStyleSheet("background-color: rgb(216, 216, 216);\n"
@@ -110,38 +110,43 @@ class Ui_RegisterWindow(object):
         self.label_9.setText("")
         self.label_9.setPixmap(QtGui.QPixmap("frontend\\images/school_45px.png"))
         self.label_9.setObjectName("label_9")
-        RegisterWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(RegisterWindow)
+        self.label_7 = QtWidgets.QLabel(self.centralwidget)
+        self.label_7.setGeometry(QtCore.QRect(500, 510, 51, 51))
+        self.label_7.setText("")
+        self.label_7.setPixmap(QtGui.QPixmap("frontend\\images/address_45px.png"))
+        self.label_7.setObjectName("label_7")
+        DoctorRegisterWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(DoctorRegisterWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 967, 26))
         self.menubar.setObjectName("menubar")
-        RegisterWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(RegisterWindow)
+        DoctorRegisterWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(DoctorRegisterWindow)
         self.statusbar.setObjectName("statusbar")
-        RegisterWindow.setStatusBar(self.statusbar)
+        DoctorRegisterWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(RegisterWindow)
-        QtCore.QMetaObject.connectSlotsByName(RegisterWindow)
+        self.retranslateUi(DoctorRegisterWindow)
+        QtCore.QMetaObject.connectSlotsByName(DoctorRegisterWindow)
 
-    def retranslateUi(self, RegisterWindow):
+    def retranslateUi(self, DoctorRegisterWindow):
         _translate = QtCore.QCoreApplication.translate
-        RegisterWindow.setWindowTitle(_translate("RegisterWindow", "RegisterWindow"))
-        self.firstname.setPlaceholderText(_translate("RegisterWindow", "Enter Your First Name"))
-        self.mobile.setPlaceholderText(_translate("RegisterWindow", "Enter Your mobile"))
-        self.email.setPlaceholderText(_translate("RegisterWindow", "Enter Your mail"))
-        self.password.setPlaceholderText(_translate("RegisterWindow", "Enter your password"))
-        self.lineEdit_6.setPlaceholderText(_translate("RegisterWindow", "Enter Your Last Name"))
-        self.cnfrmPassword.setPlaceholderText(_translate("RegisterWindow", "Confirm password"))
-        self.education.setPlaceholderText(_translate("RegisterWindow", "Education"))
-        self.specialization.setPlaceholderText(_translate("RegisterWindow", "Specialization"))
-        self.address.setPlaceholderText(_translate("RegisterWindow", "Enter Your Address"))
-        self.registerButton.setText(_translate("RegisterWindow", "Register"))
+        DoctorRegisterWindow.setWindowTitle(_translate("DoctorRegisterWindow", "RegisterWindow"))
+        self.firstname.setPlaceholderText(_translate("DoctorRegisterWindow", "Enter Your First Name"))
+        self.mobile.setPlaceholderText(_translate("DoctorRegisterWindow", "Enter Your mobile"))
+        self.email.setPlaceholderText(_translate("DoctorRegisterWindow", "Enter Your mail"))
+        self.password.setPlaceholderText(_translate("DoctorRegisterWindow", "Enter your password"))
+        self.lastName.setPlaceholderText(_translate("DoctorRegisterWindow", "Enter Your Last Name"))
+        self.cnfrmPassword.setPlaceholderText(_translate("DoctorRegisterWindow", "Confirm password"))
+        self.education.setPlaceholderText(_translate("DoctorRegisterWindow", "Education"))
+        self.specialization.setPlaceholderText(_translate("DoctorRegisterWindow", "Specialization"))
+        self.address.setPlaceholderText(_translate("DoctorRegisterWindow", "Enter Your Address"))
+        self.registerButton.setText(_translate("DoctorRegisterWindow", "Register"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    RegisterWindow = QtWidgets.QMainWindow()
-    ui = Ui_RegisterWindow()
-    ui.setupUi(RegisterWindow)
-    RegisterWindow.show()
+    DoctorRegisterWindow = QtWidgets.QMainWindow()
+    ui = Ui_DoctorRegisterWindow()
+    ui.setupUi(DoctorRegisterWindow)
+    DoctorRegisterWindow.show()
     sys.exit(app.exec_())
