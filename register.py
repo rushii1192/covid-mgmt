@@ -24,6 +24,14 @@ class CustomerRegister(QtWidgets.QMainWindow,Ui_RegisterWindow):
         cursor.execute(f"INSERT INTO patient VALUES ('{fname}','{lname}',{mobile},'{email}','{address}','{psk}')")
         dc.commit()
         
+        if self.password.text() == self.cnfrmPassword.text():
+            msg = QtWidgets.QMessageBox(self)
+            msg.setWindowTitle('Successfull')
+            msg.setText(f'Password and cnfrm password does not match.')
+            msg.setStyleSheet('color:black')
+            msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+            msg.exec_()
+
         es = EmailSender()
         msg = EmailMessage()
         msg['subject'] = 'Query from customer'
@@ -51,6 +59,14 @@ class DoctorRegister(QtWidgets.QMainWindow,Ui_DoctorRegisterWindow):
         psk = self.password.text()
         edu = self.password.text()
         spec = self.specialization.text()
+
+        if self.password.text()==self.cnfrmPassword.text():
+            msg = QtWidgets.QMessageBox(self)
+            msg.setWindowTitle('Successfull')
+            msg.setText(f'Password and cnfrm password does not match.')
+            msg.setStyleSheet('color:black')
+            msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+            msg.exec_()
 
         dc = DatabaseConnection()
         cursor = dc.cursor()
