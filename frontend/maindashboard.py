@@ -66,7 +66,7 @@ class Ui_MainDashboard(object):
 "}")
         self.registerButton.setObjectName("registerButton")
         self.dashboardButton = QtWidgets.QPushButton(self.widget)
-        self.dashboardButton.setGeometry(QtCore.QRect(50, 240, 121, 31))
+        self.dashboardButton.setGeometry(QtCore.QRect(40, 240, 131, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.dashboardButton.setFont(font)
@@ -101,6 +101,24 @@ class Ui_MainDashboard(object):
 "    background-color:rgb(0, 0, 127);\n"
 "}")
         self.doctorButton.setObjectName("doctorButton")
+        self.historyButton = QtWidgets.QPushButton(self.widget)
+        self.historyButton.setGeometry(QtCore.QRect(40, 440, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.historyButton.setFont(font)
+        self.historyButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.historyButton.setStyleSheet("QPushButton#historyButton{\n"
+"    background-color:rgb(255, 255, 255);\n"
+"    border-radius:15px;\n"
+"    padding-left:5px;\n"
+"    color:rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton#historyButton:hover{\n"
+"    color:rgb(255, 255, 255);\n"
+"    background-color:rgb(0, 0, 127);\n"
+"}")
+        self.historyButton.setObjectName("historyButton")
         self.widget_2 = QtWidgets.QWidget(self.centralwidget)
         self.widget_2.setGeometry(QtCore.QRect(270, 80, 120, 80))
         self.widget_2.setObjectName("widget_2")
@@ -161,11 +179,12 @@ class Ui_MainDashboard(object):
 
     def retranslateUi(self, MainDashboard):
         _translate = QtCore.QCoreApplication.translate
-        MainDashboard.setWindowTitle(_translate("MainDashboard", "MainWindow"))
+        MainDashboard.setWindowTitle(_translate("MainDashboard", "CustomerDashboard"))
         self.loginButton.setText(_translate("MainDashboard", "Login"))
         self.registerButton.setText(_translate("MainDashboard", "Register"))
         self.dashboardButton.setText(_translate("MainDashboard", "Dashboard"))
         self.doctorButton.setText(_translate("MainDashboard", "Doctor"))
+        self.historyButton.setText(_translate("MainDashboard", "History"))
         self.doctorSearchText.setPlaceholderText(_translate("MainDashboard", "Search Doctors"))
         self.doctorSearchButton.setText(_translate("MainDashboard", "Search"))
         self.label_2.setText(_translate("MainDashboard", "Name"))
