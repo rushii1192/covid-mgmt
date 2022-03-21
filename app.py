@@ -1,6 +1,7 @@
+from tkinter import Button
 from Login import Login
 from register import CustomerRegister, DoctorRegister
-from dashboard import CustomerDashboard, DoctorDashboard
+from dashboard import CustomerDashboard, DoctorDashboard, WelcomePage
 from PyQt5 import QtWidgets
 import sys
 
@@ -8,6 +9,7 @@ import sys
 app = QtWidgets.QApplication(sys.argv)
 
 login = Login()
+welcome = WelcomePage()
 
 custRegister = CustomerRegister()
 custdash = CustomerDashboard()
@@ -48,15 +50,37 @@ def docDoctorRegisterButtonAction():
     docRegister.hide()
     login.show()
 
+# when logout of doctor is clicked
+def docDashLogoutButtonAction():
+    docdash.hide()
+    login.show()
+
+# when login on welcome page is clicked
+def loginWelcomePageAction():
+    login.show()
+
+# when register on welcome page is clicked
+def registerWelcomePageAction():
+    custRegister.show()
+
+# actions of login page Button
 login.loginButton.clicked.connect(loginButtonAction)
 login.registerButton.clicked.connect(registerButtonAction)
 
+# actions of cutomer register page Button
 custRegister.registerButton.clicked.connect(custRegisterButtonAction)
 custRegister.doctorRegisterButton.clicked.connect(custDoctorRegisterButtonAction)
 
+# action of doctor register page Button
 docRegister.registerButton.clicked.connect(docDoctorRegisterButtonAction)
 
-login.show()
+# action of doctor dashboard Button
+docdash.logoutButton.clicked.connect(docDashLogoutButtonAction)
 
+# actions on welcome page buttons
+welcome.loginButton.clicked.connect(loginWelcomePageAction)
+welcome.registerButton.clicked.connect(registerWelcomePageAction)
+
+welcome.show()
 
 sys.exit(app.exec_())
