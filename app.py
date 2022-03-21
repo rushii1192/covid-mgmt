@@ -1,4 +1,3 @@
-from tkinter import Button
 from Login import Login
 from register import CustomerRegister, DoctorRegister
 from dashboard import CustomerDashboard, DoctorDashboard, WelcomePage
