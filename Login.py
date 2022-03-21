@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets
 from backend import DatabaseConnection
 
 class Login(QtWidgets.QMainWindow,Ui_LoginWindow):
+    __login = False
     def __init__(self) -> None:
         super().__init__()
         print('I am login imported from Login')
@@ -30,3 +31,6 @@ class Login(QtWidgets.QMainWindow,Ui_LoginWindow):
             if cursor.fetchone():
                 return 2
             return 0
+
+    def setLogin(self):
+        self.__login = True
