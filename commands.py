@@ -1,5 +1,0 @@
-pip install pyqt5-tools
-pip install pyqt5
-pyuic5 -x frontend/mainwindow.ui -o trail.py
-python -m frontend.esha
-pip install mysql-connector-python
