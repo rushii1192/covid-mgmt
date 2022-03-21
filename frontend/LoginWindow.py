@@ -46,6 +46,7 @@ class Ui_LoginWindow(object):
         font.setPointSize(10)
         font.setBold(True)
         self.loginButton.setFont(font)
+        self.loginButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.loginButton.setStyleSheet("background-color:rgb(0,0,127);\n"
 "color:rgb(255,255,255);\n"
 "border-radius:20px;\n"
@@ -68,6 +69,7 @@ class Ui_LoginWindow(object):
         font.setPointSize(10)
         font.setBold(True)
         self.registerButton.setFont(font)
+        self.registerButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.registerButton.setStyleSheet("QPushButton#registerButton{\n"
 "background-color:rgb(0,0,127);\n"
 "color:rgb(255,255,255);\n"
@@ -92,13 +94,10 @@ class Ui_LoginWindow(object):
         self.menubar = QtWidgets.QMenuBar(LoginWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 656, 26))
         self.menubar.setObjectName("menubar")
-        self.menulogin = QtWidgets.QMenu(self.menubar)
-        self.menulogin.setObjectName("menulogin")
         LoginWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(LoginWindow)
         self.statusbar.setObjectName("statusbar")
         LoginWindow.setStatusBar(self.statusbar)
-        self.menubar.addAction(self.menulogin.menuAction())
 
         self.retranslateUi(LoginWindow)
         QtCore.QMetaObject.connectSlotsByName(LoginWindow)
@@ -111,7 +110,6 @@ class Ui_LoginWindow(object):
         self.loginButton.setText(_translate("LoginWindow", "L o g i n"))
         self.label_2.setText(_translate("LoginWindow", "Don\'t have an account?"))
         self.registerButton.setText(_translate("LoginWindow", "R e g i s t e r"))
-        self.menulogin.setTitle(_translate("LoginWindow", "login"))
 
 
 if __name__ == "__main__":
