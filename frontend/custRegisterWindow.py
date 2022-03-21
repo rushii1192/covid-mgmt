@@ -27,6 +27,7 @@ class Ui_RegisterWindow(object):
         font.setBold(False)
         font.setItalic(False)
         self.registerButton.setFont(font)
+        self.registerButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.registerButton.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color: rgb(0, 0, 127);\n"
 "border-radius:5px;\n"
@@ -107,6 +108,7 @@ class Ui_RegisterWindow(object):
         font.setBold(False)
         font.setItalic(False)
         self.doctorRegisterButton.setFont(font)
+        self.doctorRegisterButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.doctorRegisterButton.setStyleSheet("color: rgb(0, 0, 127);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:5px;\n"
