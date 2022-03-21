@@ -83,6 +83,7 @@ class Ui_DoctorRegisterWindow(object):
         self.address.setObjectName("address")
         self.registerButton = QtWidgets.QPushButton(self.centralwidget)
         self.registerButton.setGeometry(QtCore.QRect(650, 610, 161, 51))
+        self.registerButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.registerButton.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color: rgb(0, 0, 127);\n"
 "border-radius:5px;\n"
