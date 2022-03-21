@@ -125,9 +125,9 @@ QPushButton#registerButton:hover{
     <widget class="QPushButton" name="dashboardButton">
      <property name="geometry">
       <rect>
-       <x>50</x>
+       <x>40</x>
        <y>240</y>
-       <width>121</width>
+       <width>131</width>
        <height>31</height>
       </rect>
      </property>
@@ -188,6 +188,40 @@ QPushButton#doctorButton:hover{
      </property>
      <property name="text">
       <string>Doctor</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="historyButton">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>440</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#historyButton{
+	background-color:rgb(255, 255, 255);
+	border-radius:15px;
+	padding-left:5px;
+	color:rgb(0, 0, 127);
+}
+
+QPushButton#historyButton:hover{
+	color:rgb(255, 255, 255);
+	background-color:rgb(0, 0, 127);
+}</string>
+     </property>
+     <property name="text">
+      <string>History</string>
      </property>
     </widget>
    </widget>
