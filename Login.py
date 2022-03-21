@@ -6,7 +6,6 @@ class Login(QtWidgets.QMainWindow,Ui_LoginWindow):
     __login = False
     def __init__(self) -> None:
         super().__init__()
-        print('I am login imported from Login')
         self.setupUi(self)
         # self.loginButton.clicked.connect(self.loginButtonAction)
         # self.changeWindow.clicked.connect(self.changeFrame)
