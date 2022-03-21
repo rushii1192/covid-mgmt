@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from widgettrail import Ui_widgetTrail
 
 
 class Ui_LoginWindow(object):
@@ -32,17 +33,10 @@ class Ui_LoginWindow(object):
         self.t1.setGeometry(QtCore.QRect(250, 90, 181, 31))
         self.t1.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.t1.setObjectName("t1")
-        self.label = QtWidgets.QLabel(LoginWindow)
-        self.label.setGeometry(QtCore.QRect(200, 380, 381, 31))
-        self.label.setStyleSheet("color: rgb(255, 255, 255);\n"
-"border-color: rgb(255, 38, 0);\n"
-"font: 16pt \"MS Gothic\";")
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(LoginWindow)
-        self.label_2.setGeometry(QtCore.QRect(90, 130, 461, 221))
-        self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("frontend/images/trail.png"))
-        self.label_2.setObjectName("label_2")
+        self.container = QtWidgets.QLabel(LoginWindow)
+        self.container.setGeometry(QtCore.QRect(110, 190, 461, 311))
+        self.container.setText("")
+        self.container.setObjectName("container")
 
         self.retranslateUi(LoginWindow)
         QtCore.QMetaObject.connectSlotsByName(LoginWindow)
@@ -52,32 +46,29 @@ class Ui_LoginWindow(object):
         LoginWindow.setWindowTitle(_translate("LoginWindow", "Widget"))
         self.clearButton.setText(_translate("LoginWindow", "Clear"))
         self.addButton.setText(_translate("LoginWindow", "Add"))
-        self.label.setText(_translate("LoginWindow", "Hello World"))
 
 class LoginForm(QtWidgets.QMainWindow,Ui_LoginWindow):
     def __init__(self) -> None:
         super().__init__()
-        self.setupUi(self)   
-        self.clearButton.clicked.connect(self.clickedMe)  
-        self.addButton.clicked.connect(self.changeLabel) 
-        # self.label.clicked.connect(self.labelClickCheck)
-        print('Hello world I am imported from form')
+        self.setupUi(self)
+        self.addButton.clicked.connect(self.changeWidget)
+        self.clearButton.clicked.connect(self.removeWidget)
 
-    def clickedMe(self):
-        print('Change Window')
-        self.label.setText('')
-        
-    def changeLabel(self):
-        self.label.setText(self.t1.text())
+    def changeWidget(self):
+        widget_ui = Ui_widgetTrail()
+        # widget_ui.trailButton.clicked.connect(self.widgetButtonTrail)
+        widget_ui.setupUi(self.container)
+        self.container.show()
 
-    def labelClickCheck(self):
-        print('Label chevk')
+    
+
+    def removeWidget(self):
+        self.container.hide()
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    LoginWindow = QtWidgets.QWidget()
-    ui = Ui_LoginWindow()
-    ui.setupUi(LoginWindow)
+    LoginWindow = LoginForm()
     LoginWindow.show()
     sys.exit(app.exec_())
+
