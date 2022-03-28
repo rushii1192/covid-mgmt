@@ -9,7 +9,6 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from widgettrail import Ui_widgetTrail
 
 
 class Ui_LoginWindow(object):
@@ -33,10 +32,12 @@ class Ui_LoginWindow(object):
         self.t1.setGeometry(QtCore.QRect(250, 90, 181, 31))
         self.t1.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.t1.setObjectName("t1")
-        self.container = QtWidgets.QLabel(LoginWindow)
-        self.container.setGeometry(QtCore.QRect(110, 190, 461, 311))
-        self.container.setText("")
-        self.container.setObjectName("container")
+        self.dateTimeEdit = QtWidgets.QDateTimeEdit(LoginWindow)
+        self.dateTimeEdit.setGeometry(QtCore.QRect(150, 220, 241, 31))
+        self.dateTimeEdit.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.dateTimeEdit.setButtonSymbols(QtWidgets.QAbstractSpinBox.PlusMinus)
+        self.dateTimeEdit.setCalendarPopup(True)
+        self.dateTimeEdit.setObjectName("dateTimeEdit")
 
         self.retranslateUi(LoginWindow)
         QtCore.QMetaObject.connectSlotsByName(LoginWindow)
@@ -46,24 +47,30 @@ class Ui_LoginWindow(object):
         LoginWindow.setWindowTitle(_translate("LoginWindow", "Widget"))
         self.clearButton.setText(_translate("LoginWindow", "Clear"))
         self.addButton.setText(_translate("LoginWindow", "Add"))
+        self.dateTimeEdit.setDisplayFormat(_translate("LoginWindow", "M/d/yyyy h:mm:ss AP"))
+
 
 class LoginForm(QtWidgets.QMainWindow,Ui_LoginWindow):
     def __init__(self) -> None:
         super().__init__()
         self.setupUi(self)
-        self.addButton.clicked.connect(self.changeWidget)
-        self.clearButton.clicked.connect(self.removeWidget)
+        self.addButton.clicked.connect(self.getdate)
+        # self.clearButton.clicked.connect(self.removeWidget)
 
-    def changeWidget(self):
-        widget_ui = Ui_widgetTrail()
-        # widget_ui.trailButton.clicked.connect(self.widgetButtonTrail)
-        widget_ui.setupUi(self.container)
-        self.container.show()
+    def getdate(self):
+        print(self.dateTimeEdit.dateTime().toString("%Y-%m-%dT%H:%M:%SZ"))
+        print(type(self.dateTimeEdit.dateTime().toString('"%Y-%m-%dT%H:%M:%SZ')))
+
+    # def changeWidget(self):
+    #     widget_ui = Ui_widgetTrail()
+    #     # widget_ui.trailButton.clicked.connect(self.widgetButtonTrail)
+    #     widget_ui.setupUi(self.container)
+    #     self.container.show()
 
     
 
-    def removeWidget(self):
-        self.container.hide()
+    # def removeWidget(self):
+    #     self.container.hide()
 
 if __name__ == "__main__":
     import sys
@@ -71,4 +78,5 @@ if __name__ == "__main__":
     LoginWindow = LoginForm()
     LoginWindow.show()
     sys.exit(app.exec_())
+
 
