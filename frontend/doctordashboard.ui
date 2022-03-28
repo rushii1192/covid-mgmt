@@ -16,7 +16,15 @@
   <property name="styleSheet">
    <string notr="true">background-color:rgb(255,255,255);</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="centralwidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1101</width>
+     <height>761</height>
+    </rect>
+   </property>
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
@@ -743,7 +751,16 @@ background-color:rgb(199,230,255);</string>
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>3</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
