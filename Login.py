@@ -1,5 +1,5 @@
 from frontend.LoginWindow import Ui_LoginWindow
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 from backend import DatabaseConnection
 
 class Login(QtWidgets.QMainWindow,Ui_LoginWindow):
@@ -7,6 +7,7 @@ class Login(QtWidgets.QMainWindow,Ui_LoginWindow):
     def __init__(self) -> None:
         super().__init__()
         self.setupUi(self)
+        self.setWindowIcon(QtGui.QIcon('frontend/images/medical-logo.jpg'))   
         # self.loginButton.clicked.connect(self.loginButtonAction)
         # self.changeWindow.clicked.connect(self.changeFrame)
 
