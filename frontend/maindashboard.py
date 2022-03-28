@@ -29,16 +29,14 @@ class Ui_MainDashboard(object):
         self.label.setPixmap(QtGui.QPixmap("frontend\\images/medical-logo.jpg"))
         self.label.setObjectName("label")
         self.loginButton = QtWidgets.QPushButton(self.widget)
-        self.loginButton.setGeometry(QtCore.QRect(40, 290, 91, 31))
+        self.loginButton.setGeometry(QtCore.QRect(60, 270, 61, 31))
         font = QtGui.QFont()
-        font.setFamily("Bookman Old Style")
         font.setPointSize(14)
         self.loginButton.setFont(font)
         self.loginButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.loginButton.setStyleSheet("QPushButton#loginButton{\n"
 "    background-color:rgb(255, 255, 255);\n"
 "    border-radius:15px;\n"
-"    padding-left:5px;\n"
 "    color:rgb(0, 0, 127);\n"
 "}\n"
 "\n"
@@ -48,7 +46,7 @@ class Ui_MainDashboard(object):
 "}")
         self.loginButton.setObjectName("loginButton")
         self.registerButton = QtWidgets.QPushButton(self.widget)
-        self.registerButton.setGeometry(QtCore.QRect(40, 340, 121, 31))
+        self.registerButton.setGeometry(QtCore.QRect(60, 310, 81, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.registerButton.setFont(font)
@@ -56,7 +54,6 @@ class Ui_MainDashboard(object):
         self.registerButton.setStyleSheet("QPushButton#registerButton{\n"
 "    background-color:rgb(255, 255, 255);\n"
 "    border-radius:15px;\n"
-"    padding-left:5px;\n"
 "    color:rgb(0, 0, 127);\n"
 "}\n"
 "\n"
@@ -66,7 +63,7 @@ class Ui_MainDashboard(object):
 "}")
         self.registerButton.setObjectName("registerButton")
         self.dashboardButton = QtWidgets.QPushButton(self.widget)
-        self.dashboardButton.setGeometry(QtCore.QRect(40, 240, 131, 31))
+        self.dashboardButton.setGeometry(QtCore.QRect(60, 220, 111, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.dashboardButton.setFont(font)
@@ -74,7 +71,6 @@ class Ui_MainDashboard(object):
         self.dashboardButton.setStyleSheet("QPushButton#dashboardButton{\n"
 "    background-color:rgb(255, 255, 255);\n"
 "    border-radius:15px;\n"
-"    padding-left:5px;\n"
 "    color:rgb(0, 0, 127);\n"
 "}\n"
 "\n"
@@ -84,7 +80,7 @@ class Ui_MainDashboard(object):
 "}")
         self.dashboardButton.setObjectName("dashboardButton")
         self.doctorButton = QtWidgets.QPushButton(self.widget)
-        self.doctorButton.setGeometry(QtCore.QRect(40, 390, 101, 31))
+        self.doctorButton.setGeometry(QtCore.QRect(60, 360, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.doctorButton.setFont(font)
@@ -92,7 +88,6 @@ class Ui_MainDashboard(object):
         self.doctorButton.setStyleSheet("QPushButton#doctorButton{\n"
 "    background-color:rgb(255, 255, 255);\n"
 "    border-radius:15px;\n"
-"    padding-left:5px;\n"
 "    color:rgb(0, 0, 127);\n"
 "}\n"
 "\n"
@@ -102,7 +97,7 @@ class Ui_MainDashboard(object):
 "}")
         self.doctorButton.setObjectName("doctorButton")
         self.historyButton = QtWidgets.QPushButton(self.widget)
-        self.historyButton.setGeometry(QtCore.QRect(40, 440, 101, 31))
+        self.historyButton.setGeometry(QtCore.QRect(60, 410, 71, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.historyButton.setFont(font)
@@ -110,7 +105,6 @@ class Ui_MainDashboard(object):
         self.historyButton.setStyleSheet("QPushButton#historyButton{\n"
 "    background-color:rgb(255, 255, 255);\n"
 "    border-radius:15px;\n"
-"    padding-left:5px;\n"
 "    color:rgb(0, 0, 127);\n"
 "}\n"
 "\n"
@@ -119,6 +113,23 @@ class Ui_MainDashboard(object):
 "    background-color:rgb(0, 0, 127);\n"
 "}")
         self.historyButton.setObjectName("historyButton")
+        self.logoutButton = QtWidgets.QPushButton(self.widget)
+        self.logoutButton.setGeometry(QtCore.QRect(60, 450, 81, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.logoutButton.setFont(font)
+        self.logoutButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.logoutButton.setStyleSheet("QPushButton#logoutButton{\n"
+"    background-color:rgb(255, 255, 255);\n"
+"    border-radius:15px;\n"
+"    color:rgb(0, 0, 127);\n"
+"}\n"
+"\n"
+"QPushButton#logoutButton:hover{\n"
+"    color:rgb(255, 255, 255);\n"
+"    background-color:rgb(0, 0, 127);\n"
+"}")
+        self.logoutButton.setObjectName("logoutButton")
         self.widget_2 = QtWidgets.QWidget(self.centralwidget)
         self.widget_2.setGeometry(QtCore.QRect(270, 80, 120, 80))
         self.widget_2.setObjectName("widget_2")
@@ -185,6 +196,7 @@ class Ui_MainDashboard(object):
         self.dashboardButton.setText(_translate("MainDashboard", "Dashboard"))
         self.doctorButton.setText(_translate("MainDashboard", "Doctor"))
         self.historyButton.setText(_translate("MainDashboard", "History"))
+        self.logoutButton.setText(_translate("MainDashboard", "LogOut"))
         self.doctorSearchText.setPlaceholderText(_translate("MainDashboard", "Search Doctors"))
         self.doctorSearchButton.setText(_translate("MainDashboard", "Search"))
         self.label_2.setText(_translate("MainDashboard", "Name"))
