@@ -1,3 +1,3 @@
 {
-    "files": ["Trail.qml","form.ui","frontend/doctordashboard.ui","frontend/mainwindow.ui","widget.py","frontend/register.ui","frontend/login.ui","frontend/dialog.ui","frontend/frontend-images.qrc","frontend/CustomerDashboard.ui","dialog.ui","TrailForm.ui.qml","frontend/doctorregister.ui"]
+    "files": ["Trail.qml","widget.py","frontend/register.ui","frontend/doctordashboard.ui","TrailForm.ui.qml","frontend/mainwindow.ui","frontend/patientappointment.ui","dialog.ui","form.ui","frontend/login.ui","frontend/CustomerDashboard.ui","frontend/frontend-images.qrc","frontend/dialog.ui","frontend/doctorregister.ui","frontend/history.ui"]
 }
