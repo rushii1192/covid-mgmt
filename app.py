@@ -20,7 +20,9 @@ docdash = DoctorDashboard()
 def loginButtonAction():
     if login.login() == 1:
         login.hide()
-        custdash.show()
+        welcome.logoutButton.show()
+        welcome.show()
+
     elif login.login() == 2:
         login.hide()
         docdash.show()
