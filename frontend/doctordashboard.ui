@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>DoctorDashboard</class>
- <widget class="QMainWindow" name="DoctorDashboard">
+ <widget class="QWidget" name="DoctorDashboard">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -27,113 +27,13 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(1,76,120);
+     <string notr="true">background-color:rgb(0,0,127);
 color:rgb(255,255,255);
 border-radius:8px;
 padding-left:10px;
 border:2px solid rgb(1,76,120);
 border-bottom-color:rgb(0, 0, 102);</string>
     </property>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>120</y>
-       <width>181</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:rgb(1,76,120);
-color:rgb(255,255,255);
-padding-left:10px;
-border:2px solid rgb(1,76,120);
-</string>
-     </property>
-     <property name="text">
-      <string>Profile Details</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>180</y>
-       <width>191</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:rgb(1,76,120);
-color:rgb(255,255,255);
-padding-left:10px;
-border:2px solid rgb(1,76,120);
-</string>
-     </property>
-     <property name="text">
-      <string>Appointments</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>250</y>
-       <width>161</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:rgb(1,76,120);
-color:rgb(255,255,255);
-padding-left:10px;
-border:2px solid rgb(1,76,120);
-</string>
-     </property>
-     <property name="text">
-      <string>My Patients</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_4">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>310</y>
-       <width>161</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:rgb(1,76,120);
-color:rgb(255,255,255);
-padding-left:10px;
-border:2px solid rgb(1,76,120);
-</string>
-     </property>
-     <property name="text">
-      <string>Logout</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
@@ -208,6 +108,70 @@ border:2px solid rgb(1,76,120);
      </property>
      <property name="pixmap">
       <pixmap>images/Logout_45px.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="profileButton">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>110</y>
+       <width>93</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Profile</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="appointmentButton">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>180</y>
+       <width>111</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Appointment</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="patientButton">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>250</y>
+       <width>93</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Patient</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="logoutButton">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>310</y>
+       <width>93</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>Logout</string>
      </property>
     </widget>
    </widget>

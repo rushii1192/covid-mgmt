@@ -27,46 +27,54 @@ class Ui_DoctorRegisterWindow(object):
         self.label.setPixmap(QtGui.QPixmap("frontend\\images/real-doctor.jpg"))
         self.label.setObjectName("label")
         self.firstname = QtWidgets.QLineEdit(self.centralwidget)
-        self.firstname.setGeometry(QtCore.QRect(560, 70, 171, 51))
+        self.firstname.setGeometry(QtCore.QRect(560, 80, 171, 41))
         self.firstname.setStyleSheet("background-color: rgb(216, 216, 216);\n"
-"border-radius: 25px;")
+"border-radius: 20px;\n"
+"padding-left:10px;")
         self.firstname.setObjectName("firstname")
         self.mobile = QtWidgets.QLineEdit(self.centralwidget)
-        self.mobile.setGeometry(QtCore.QRect(560, 140, 261, 51))
+        self.mobile.setGeometry(QtCore.QRect(560, 150, 261, 41))
         self.mobile.setStyleSheet("background-color: rgb(216, 216, 216);\n"
-"border-radius: 25px;")
+"border-radius: 20px;\n"
+"padding-left:10px;")
         self.mobile.setObjectName("mobile")
         self.email = QtWidgets.QLineEdit(self.centralwidget)
-        self.email.setGeometry(QtCore.QRect(560, 210, 371, 51))
+        self.email.setGeometry(QtCore.QRect(560, 220, 371, 41))
         self.email.setStyleSheet("background-color: rgb(216, 216, 216);\n"
-"border-radius: 25px;")
+"border-radius: 20px;\n"
+"padding-left:10px;")
         self.email.setObjectName("email")
         self.password = QtWidgets.QLineEdit(self.centralwidget)
-        self.password.setGeometry(QtCore.QRect(560, 280, 271, 51))
+        self.password.setGeometry(QtCore.QRect(560, 290, 271, 41))
         self.password.setStyleSheet("background-color: rgb(216, 216, 216);\n"
-"border-radius: 25px;")
+"border-radius: 20px;\n"
+"padding-left:10px;")
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.password.setObjectName("password")
         self.lastName = QtWidgets.QLineEdit(self.centralwidget)
-        self.lastName.setGeometry(QtCore.QRect(760, 70, 171, 51))
+        self.lastName.setGeometry(QtCore.QRect(760, 80, 171, 41))
         self.lastName.setStyleSheet("background-color: rgb(216, 216, 216);\n"
-"border-radius: 25px;")
+"border-radius: 20px;\n"
+"padding-left:10px;")
         self.lastName.setObjectName("lastName")
         self.cnfrmPassword = QtWidgets.QLineEdit(self.centralwidget)
-        self.cnfrmPassword.setGeometry(QtCore.QRect(560, 350, 271, 51))
+        self.cnfrmPassword.setGeometry(QtCore.QRect(560, 360, 271, 41))
         self.cnfrmPassword.setStyleSheet("background-color: rgb(216, 216, 216);\n"
-"border-radius: 25px;")
+"border-radius: 20px;\n"
+"padding-left:10px;")
         self.cnfrmPassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.cnfrmPassword.setObjectName("cnfrmPassword")
         self.education = QtWidgets.QLineEdit(self.centralwidget)
-        self.education.setGeometry(QtCore.QRect(560, 420, 161, 51))
+        self.education.setGeometry(QtCore.QRect(560, 430, 161, 41))
         self.education.setStyleSheet("background-color: rgb(216, 216, 216);\n"
-"border-radius: 25px;")
+"border-radius: 20px;\n"
+"padding-left:10px;")
         self.education.setObjectName("education")
         self.specialization = QtWidgets.QLineEdit(self.centralwidget)
-        self.specialization.setGeometry(QtCore.QRect(740, 420, 181, 51))
+        self.specialization.setGeometry(QtCore.QRect(740, 430, 181, 41))
         self.specialization.setStyleSheet("background-color: rgb(216, 216, 216);\n"
-"border-radius: 25px;")
+"border-radius: 20px;\n"
+"padding-left:10px;")
         self.specialization.setObjectName("specialization")
         self.address = QtWidgets.QLineEdit(self.centralwidget)
         self.address.setGeometry(QtCore.QRect(560, 490, 391, 81))
@@ -75,6 +83,7 @@ class Ui_DoctorRegisterWindow(object):
         self.address.setObjectName("address")
         self.registerButton = QtWidgets.QPushButton(self.centralwidget)
         self.registerButton.setGeometry(QtCore.QRect(650, 610, 161, 51))
+        self.registerButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.registerButton.setStyleSheet("color: rgb(255, 255, 255);\n"
 "background-color: rgb(0, 0, 127);\n"
 "border-radius:5px;\n"
