@@ -1,14 +1,14 @@
 from frontend.custRegisterWindow import Ui_RegisterWindow
 from frontend.doctorRegisterWindow import Ui_DoctorRegisterWindow
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 from backend import DatabaseConnection, EmailSender
 from email.message import EmailMessage
 
 class CustomerRegister(QtWidgets.QMainWindow,Ui_RegisterWindow):
     def __init__(self) -> None:
         super().__init__()
-        print('I am Regsiter imported from Login')
         self.setupUi(self)
+        self.setWindowIcon(QtGui.QIcon('frontend/images/medical-logo.jpg'))   
         # self.loginButton.clicked.connect(self.loginButtonAction)
         # self.changeWindow.clicked.connect(self.changeFrame)
 
@@ -49,6 +49,7 @@ class DoctorRegister(QtWidgets.QMainWindow,Ui_DoctorRegisterWindow):
     def __init__(self) -> None:
         super().__init__()
         self.setupUi(self)
+        self.setWindowIcon(QtGui.QIcon('frontend/images/medical-logo.jpg'))   
 
     def register(self):
         fname = self.firstname.text()
