@@ -23,13 +23,19 @@ class Ui_widgetTrail(object):
         self.trailButton.setStyleSheet("color: rgb(85, 170, 0);\n"
 "background-color: rgb(255, 170, 0);")
         self.trailButton.setObjectName("trailButton")
+        self.trailButton.clicked.connect(lambda: self.printHello())
+        # print('setup ui is called')
+        # self.printHello()
 
-        self.retranslateUi(widgetTrail)
+        self.retranslateUi()
         QtCore.QMetaObject.connectSlotsByName(widgetTrail)
 
-    def retranslateUi(self, widgetTrail):
+    def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
         self.trailButton.setText(_translate("widgetTrail", "Trail action"))
+
+    def printHello(self):
+        print('Hello World')
 
 
 if __name__ == "__main__":
