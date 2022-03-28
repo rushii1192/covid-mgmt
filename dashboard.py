@@ -18,3 +18,4 @@ class WelcomePage(QtWidgets.QMainWindow,Ui_MainDashboard):
     def __init__(self) -> None:
         super().__init__()
         self.setupUi(self)
+        self.logoutButton.hide()
