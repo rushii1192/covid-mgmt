@@ -22,6 +22,7 @@ def loginButtonAction():
         login.hide()
         welcome.logoutButton.show()
         welcome.historyButton.show()
+        welcome.registerButton.hide()
         welcome.setCustomerId(loginState[1])
         welcome.show()
 
@@ -67,6 +68,9 @@ def loginWelcomePageAction():
 def registerWelcomePageAction():
     custRegister.show()
 
+# when dashboard button on welcome page is clicked
+def dashboardWelcomePageAction():
+    pass
 # actions of login page Button
 login.loginButton.clicked.connect(loginButtonAction)
 login.registerButton.clicked.connect(registerButtonAction)
@@ -84,6 +88,7 @@ docdash.logoutButton.clicked.connect(docDashLogoutButtonAction)
 # actions on welcome page buttons
 welcome.loginButton.clicked.connect(loginWelcomePageAction)
 welcome.registerButton.clicked.connect(registerWelcomePageAction)
+welcome.dashboardButton.clicked.connect(dashboardWelcomePageAction)
 
 
 
