@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'frontend/doctordashboard.ui'
+# Form implementation generated from reading ui file '.\frontend\doctordashboard.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -11,127 +11,219 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_DoctorDashboard(object):
-    def setupUi(self, DoctorDashboard):
-        DoctorDashboard.setObjectName("DoctorDashboard")
-        DoctorDashboard.resize(1229, 657)
-        DoctorDashboard.setStyleSheet("background-color:rgb(255,255,255);")
-        self.statusbar = QtWidgets.QStatusBar(DoctorDashboard)
-        self.statusbar.setGeometry(QtCore.QRect(0, 0, 3, 25))
-        self.statusbar.setObjectName("statusbar")
-        self.widget = QtWidgets.QWidget(DoctorDashboard)
-        self.widget.setGeometry(QtCore.QRect(-10, -10, 291, 671))
-        self.widget.setStyleSheet("background-color: rgb(0, 0, 127);")
-        self.widget.setObjectName("widget")
-        self.profileButton = QtWidgets.QPushButton(self.widget)
-        self.profileButton.setGeometry(QtCore.QRect(50, 100, 111, 31))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.profileButton.setFont(font)
-        self.profileButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.profileButton.setStyleSheet("QPushButton#profileButton{\n"
-"    background-color:rgb(0,0,127);\n"
-"    border-radius:5px;\n"
-"    border-color:rgb(0,0,127);\n"
-"    color:rgb(255,255,255)\n"
-"}\n"
-"\n"
-"QPushButton#profileButton:hover{\n"
-"    background-color:rgb(255,255,255);\n"
-"    color:rgb(0,0,127)\n"
-"}")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("frontend\\images/user_secured_45px.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.profileButton.setIcon(icon)
-        self.profileButton.setIconSize(QtCore.QSize(30, 30))
-        self.profileButton.setObjectName("profileButton")
-        self.appointmentButton = QtWidgets.QPushButton(self.widget)
-        self.appointmentButton.setGeometry(QtCore.QRect(50, 160, 201, 41))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.appointmentButton.setFont(font)
-        self.appointmentButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.appointmentButton.setStyleSheet("QPushButton#appointmentButton{\n"
-"    background-color:rgb(0,0,127);\n"
-"    border-radius:5px;\n"
-"    border-color:rgb(0,0,127);\n"
-"    color:rgb(255,255,255)\n"
-"}\n"
-"\n"
-"QPushButton#appointmentButton:hover{\n"
-"    background-color:rgb(255,255,255);\n"
-"    color:rgb(0,0,127)\n"
-"}")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("frontend\\images/schedule_45px.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.appointmentButton.setIcon(icon1)
-        self.appointmentButton.setIconSize(QtCore.QSize(30, 30))
-        self.appointmentButton.setObjectName("appointmentButton")
-        self.patientButton = QtWidgets.QPushButton(self.widget)
-        self.patientButton.setGeometry(QtCore.QRect(50, 220, 121, 41))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.patientButton.setFont(font)
-        self.patientButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.patientButton.setStyleSheet("QPushButton#patientButton{\n"
-"    background-color:rgb(0,0,127);\n"
-"    border-radius:5px;\n"
-"    border-color:rgb(0,0,127);\n"
-"    color:rgb(255,255,255)\n"
-"}\n"
-"\n"
-"QPushButton#patientButton:hover{\n"
-"    background-color:rgb(255,255,255);\n"
-"    color:rgb(0,0,127)\n"
-"}")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("frontend\\images/ecg_45px.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.patientButton.setIcon(icon2)
-        self.patientButton.setIconSize(QtCore.QSize(30, 30))
-        self.patientButton.setObjectName("patientButton")
-        self.logoutButton = QtWidgets.QPushButton(self.widget)
-        self.logoutButton.setGeometry(QtCore.QRect(50, 280, 121, 41))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.logoutButton.setFont(font)
+class Ui_doctorDashboard(object):
+    def setupUi(self, doctorDashboard):
+        doctorDashboard.setObjectName("doctorDashboard")
+        doctorDashboard.resize(1259, 684)
+        doctorDashboard.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.appointments = QtWidgets.QWidget()
+        self.appointments.setObjectName("appointments")
+        self.meetStart = QtWidgets.QPushButton(self.appointments)
+        self.meetStart.setGeometry(QtCore.QRect(550, 130, 191, 51))
+        self.meetStart.setStyleSheet("background-color: rgb(0, 0, 127);\n"
+"color: rgb(255, 255, 255);")
+        self.meetStart.setObjectName("meetStart")
+        self.patientName = QtWidgets.QLabel(self.appointments)
+        self.patientName.setGeometry(QtCore.QRect(90, 50, 181, 31))
+        self.patientName.setObjectName("patientName")
+        self.problem = QtWidgets.QLabel(self.appointments)
+        self.problem.setGeometry(QtCore.QRect(90, 110, 181, 31))
+        self.problem.setObjectName("problem")
+        self.pastHistory = QtWidgets.QLabel(self.appointments)
+        self.pastHistory.setGeometry(QtCore.QRect(90, 170, 181, 31))
+        self.pastHistory.setObjectName("pastHistory")
+        self.pastHistory_2 = QtWidgets.QLabel(self.appointments)
+        self.pastHistory_2.setGeometry(QtCore.QRect(90, 240, 181, 31))
+        self.pastHistory_2.setObjectName("pastHistory_2")
+        self.medicines = QtWidgets.QTextEdit(self.appointments)
+        self.medicines.setGeometry(QtCore.QRect(80, 300, 691, 291))
+        self.medicines.setObjectName("medicines")
+        doctorDashboard.addTab(self.appointments, "")
+        self.profile = QtWidgets.QWidget()
+        self.profile.setObjectName("profile")
+        self.education = QtWidgets.QLineEdit(self.profile)
+        self.education.setGeometry(QtCore.QRect(560, 350, 161, 41))
+        self.education.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 20px;\n"
+"padding-left:10px;")
+        self.education.setObjectName("education")
+        self.label_4 = QtWidgets.QLabel(self.profile)
+        self.label_4.setGeometry(QtCore.QRect(500, 130, 51, 51))
+        self.label_4.setText("")
+        self.label_4.setPixmap(QtGui.QPixmap(".\\frontend\\images/add_phone_45px.png"))
+        self.label_4.setObjectName("label_4")
+        self.specialization = QtWidgets.QLineEdit(self.profile)
+        self.specialization.setGeometry(QtCore.QRect(740, 350, 181, 41))
+        self.specialization.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 20px;\n"
+"padding-left:10px;")
+        self.specialization.setObjectName("specialization")
+        self.label_5 = QtWidgets.QLabel(self.profile)
+        self.label_5.setGeometry(QtCore.QRect(500, 270, 51, 51))
+        self.label_5.setText("")
+        self.label_5.setPixmap(QtGui.QPixmap(".\\frontend\\images/password_45px.png"))
+        self.label_5.setObjectName("label_5")
+        self.label_7 = QtWidgets.QLabel(self.profile)
+        self.label_7.setGeometry(QtCore.QRect(500, 440, 51, 51))
+        self.label_7.setText("")
+        self.label_7.setPixmap(QtGui.QPixmap(".\\frontend\\images/address_45px.png"))
+        self.label_7.setObjectName("label_7")
+        self.changeButton = QtWidgets.QPushButton(self.profile)
+        self.changeButton.setGeometry(QtCore.QRect(1010, 290, 191, 51))
+        self.changeButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.changeButton.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(0, 0, 127);\n"
+"border-radius:5px;\n"
+"font: 16pt \"Segoe UI\";")
+        self.changeButton.setObjectName("changeButton")
+        self.label_9 = QtWidgets.QLabel(self.profile)
+        self.label_9.setGeometry(QtCore.QRect(500, 340, 51, 51))
+        self.label_9.setText("")
+        self.label_9.setPixmap(QtGui.QPixmap(".\\frontend\\images/school_45px.png"))
+        self.label_9.setObjectName("label_9")
+        self.firstname = QtWidgets.QLineEdit(self.profile)
+        self.firstname.setGeometry(QtCore.QRect(560, 70, 171, 41))
+        self.firstname.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 20px;\n"
+"padding-left:10px;")
+        self.firstname.setObjectName("firstname")
+        self.password = QtWidgets.QLineEdit(self.profile)
+        self.password.setGeometry(QtCore.QRect(560, 280, 271, 41))
+        self.password.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 20px;\n"
+"padding-left:10px;")
+        self.password.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.password.setObjectName("password")
+        self.label_3 = QtWidgets.QLabel(self.profile)
+        self.label_3.setGeometry(QtCore.QRect(500, 200, 51, 51))
+        self.label_3.setText("")
+        self.label_3.setPixmap(QtGui.QPixmap(".\\frontend\\images/gmail_logo_45px.png"))
+        self.label_3.setObjectName("label_3")
+        self.lastName = QtWidgets.QLineEdit(self.profile)
+        self.lastName.setGeometry(QtCore.QRect(760, 70, 171, 41))
+        self.lastName.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 20px;\n"
+"padding-left:10px;")
+        self.lastName.setObjectName("lastName")
+        self.label_2 = QtWidgets.QLabel(self.profile)
+        self.label_2.setGeometry(QtCore.QRect(500, 60, 51, 51))
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap(".\\frontend\\images/user_45px.png"))
+        self.label_2.setObjectName("label_2")
+        self.email = QtWidgets.QLineEdit(self.profile)
+        self.email.setGeometry(QtCore.QRect(560, 210, 371, 41))
+        self.email.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 20px;\n"
+"padding-left:10px;")
+        self.email.setObjectName("email")
+        self.address = QtWidgets.QLineEdit(self.profile)
+        self.address.setGeometry(QtCore.QRect(560, 420, 391, 81))
+        self.address.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 25px;")
+        self.address.setObjectName("address")
+        self.mobile = QtWidgets.QLineEdit(self.profile)
+        self.mobile.setGeometry(QtCore.QRect(560, 140, 261, 41))
+        self.mobile.setStyleSheet("background-color: rgb(216, 216, 216);\n"
+"border-radius: 20px;\n"
+"padding-left:10px;")
+        self.mobile.setObjectName("mobile")
+        self.applyButton = QtWidgets.QPushButton(self.profile)
+        self.applyButton.setGeometry(QtCore.QRect(1010, 360, 161, 51))
+        self.applyButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.applyButton.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(0, 0, 127);\n"
+"border-radius:5px;\n"
+"font: 16pt \"Segoe UI\";")
+        self.applyButton.setObjectName("applyButton")
+        self.logoutButton = QtWidgets.QPushButton(self.profile)
+        self.logoutButton.setGeometry(QtCore.QRect(1010, 220, 161, 51))
         self.logoutButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.logoutButton.setStyleSheet("QPushButton#logoutButton{\n"
-"    background-color:rgb(0,0,127);\n"
-"    border-radius:5px;\n"
-"    border-color:rgb(0,0,127);\n"
-"    color:rgb(255,255,255)\n"
-"}\n"
-"\n"
-"QPushButton#logoutButton:hover{\n"
-"    background-color:rgb(255,255,255);\n"
-"    color:rgb(0,0,127)\n"
-"}")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("frontend\\images/Logout_45px.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.logoutButton.setIcon(icon3)
-        self.logoutButton.setIconSize(QtCore.QSize(30, 30))
+        self.logoutButton.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(0, 0, 127);\n"
+"border-radius:5px;\n"
+"font: 16pt \"Segoe UI\";")
         self.logoutButton.setObjectName("logoutButton")
-        self.mainContainer = QtWidgets.QWidget(DoctorDashboard)
-        self.mainContainer.setGeometry(QtCore.QRect(280, 0, 961, 661))
-        self.mainContainer.setObjectName("mainContainer")
+        self.label = QtWidgets.QLabel(self.profile)
+        self.label.setGeometry(QtCore.QRect(0, 30, 461, 551))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap(".\\frontend\\images/real-doctor.jpg"))
+        self.label.setObjectName("label")
+        doctorDashboard.addTab(self.profile, "")
+        self.history = QtWidgets.QWidget()
+        self.history.setObjectName("history")
+        self.historyFrame = QtWidgets.QFrame(self.history)
+        self.historyFrame.setGeometry(QtCore.QRect(10, 20, 1201, 51))
+        self.historyFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.historyFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.historyFrame.setObjectName("historyFrame")
+        self.historyPatientName = QtWidgets.QLabel(self.historyFrame)
+        self.historyPatientName.setGeometry(QtCore.QRect(30, 10, 231, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.historyPatientName.setFont(font)
+        self.historyPatientName.setObjectName("historyPatientName")
+        self.historyPatientProblem = QtWidgets.QLabel(self.historyFrame)
+        self.historyPatientProblem.setGeometry(QtCore.QRect(270, 10, 441, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.historyPatientProblem.setFont(font)
+        self.historyPatientProblem.setObjectName("historyPatientProblem")
+        self.historyPatientAppoint = QtWidgets.QLabel(self.historyFrame)
+        self.historyPatientAppoint.setGeometry(QtCore.QRect(740, 10, 171, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.historyPatientAppoint.setFont(font)
+        self.historyPatientAppoint.setObjectName("historyPatientAppoint")
+        self.historyPatientStatus = QtWidgets.QLabel(self.historyFrame)
+        self.historyPatientStatus.setGeometry(QtCore.QRect(1000, 10, 171, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.historyPatientStatus.setFont(font)
+        self.historyPatientStatus.setObjectName("historyPatientStatus")
+        self.historyTable = QtWidgets.QTableWidget(self.history)
+        self.historyTable.setGeometry(QtCore.QRect(10, 100, 1201, 491))
+        self.historyTable.setObjectName("historyTable")
+        self.historyTable.setColumnCount(0)
+        self.historyTable.setRowCount(0)
+        doctorDashboard.addTab(self.history, "")
 
-        self.retranslateUi(DoctorDashboard)
-        QtCore.QMetaObject.connectSlotsByName(DoctorDashboard)
+        self.retranslateUi(doctorDashboard)
+        doctorDashboard.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(doctorDashboard)
 
-    def retranslateUi(self, DoctorDashboard):
+    def retranslateUi(self, doctorDashboard):
         _translate = QtCore.QCoreApplication.translate
-        DoctorDashboard.setWindowTitle(_translate("DoctorDashboard", "MainWindow"))
-        self.profileButton.setText(_translate("DoctorDashboard", "Profile"))
-        self.appointmentButton.setText(_translate("DoctorDashboard", "Appointment"))
-        self.patientButton.setText(_translate("DoctorDashboard", "Patient"))
-        self.logoutButton.setText(_translate("DoctorDashboard", "Logout"))
+        doctorDashboard.setWindowTitle(_translate("doctorDashboard", "Doctor Dashboard"))
+        self.meetStart.setText(_translate("doctorDashboard", "Start Meet"))
+        self.patientName.setText(_translate("doctorDashboard", "Patient Name"))
+        self.problem.setText(_translate("doctorDashboard", "Patient Problem"))
+        self.pastHistory.setText(_translate("doctorDashboard", "Patient Past History"))
+        self.pastHistory_2.setText(_translate("doctorDashboard", "Prescribe Medicines"))
+        doctorDashboard.setTabText(doctorDashboard.indexOf(self.appointments), _translate("doctorDashboard", "Appointments"))
+        self.education.setPlaceholderText(_translate("doctorDashboard", "Education"))
+        self.specialization.setPlaceholderText(_translate("doctorDashboard", "Specialization"))
+        self.changeButton.setText(_translate("doctorDashboard", "Change Details"))
+        self.firstname.setPlaceholderText(_translate("doctorDashboard", "Enter Your First Name"))
+        self.password.setPlaceholderText(_translate("doctorDashboard", "Enter your password"))
+        self.lastName.setPlaceholderText(_translate("doctorDashboard", "Enter Your Last Name"))
+        self.email.setPlaceholderText(_translate("doctorDashboard", "Enter Your mail"))
+        self.address.setPlaceholderText(_translate("doctorDashboard", "Enter Your Address"))
+        self.mobile.setPlaceholderText(_translate("doctorDashboard", "Enter Your mobile"))
+        self.applyButton.setText(_translate("doctorDashboard", "Apply"))
+        self.logoutButton.setText(_translate("doctorDashboard", "Log Out"))
+        doctorDashboard.setTabText(doctorDashboard.indexOf(self.profile), _translate("doctorDashboard", "Profile"))
+        self.historyPatientName.setText(_translate("doctorDashboard", "Patient Name"))
+        self.historyPatientProblem.setText(_translate("doctorDashboard", "Problem"))
+        self.historyPatientAppoint.setText(_translate("doctorDashboard", "Appointment Date"))
+        self.historyPatientStatus.setText(_translate("doctorDashboard", "Status"))
+        doctorDashboard.setTabText(doctorDashboard.indexOf(self.history), _translate("doctorDashboard", "History"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    DoctorDashboard = QtWidgets.QWidget()
-    ui = Ui_DoctorDashboard()
-    ui.setupUi(DoctorDashboard)
-    DoctorDashboard.show()
+    doctorDashboard = QtWidgets.QTabWidget()
+    ui = Ui_doctorDashboard()
+    ui.setupUi(doctorDashboard)
+    doctorDashboard.show()
     sys.exit(app.exec_())
