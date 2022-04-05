@@ -78,7 +78,7 @@ border-radius:12px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(216, 216, 216);
+     <string notr="true">background-color: rgb(230, 230, 230);
 border-radius:15px;
 </string>
     </property>
@@ -139,7 +139,7 @@ border-radius:15px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(216, 216, 216);
+     <string notr="true">background-color: rgb(230, 230, 230);
 border-radius:15px;
 </string>
     </property>
