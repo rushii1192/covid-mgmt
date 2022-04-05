@@ -28,6 +28,7 @@ def loginButtonAction():
 
     elif loginState[0] == 2:
         login.hide()
+        docdash.setDoctorId(loginState[1])
         docdash.show()
     else:
         login.loginError()
