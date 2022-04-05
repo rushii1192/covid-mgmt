@@ -1,6 +1,6 @@
 from Login import Login
 from register import CustomerRegister, DoctorRegister
-from dashboard import CustomerDashboard, DoctorDashboard, WelcomePage
+from dashboard import DoctorDashboard, WelcomePage
 from PyQt5 import QtWidgets
 import sys
 
@@ -11,19 +11,21 @@ login = Login()
 welcome = WelcomePage()
 
 custRegister = CustomerRegister()
-custdash = CustomerDashboard()
 
 docRegister = DoctorRegister()
 docdash = DoctorDashboard()
 
 # when login button on login page is clicked
 def loginButtonAction():
-    if login.login() == 1:
+    loginState = login.login()
+    if  loginState[0]== 1:
         login.hide()
         welcome.logoutButton.show()
+        welcome.historyButton.show()
+        welcome.setCustomerId(loginState[1])
         welcome.show()
 
-    elif login.login() == 2:
+    elif loginState[0] == 2:
         login.hide()
         docdash.show()
     else:
@@ -54,6 +56,7 @@ def docDoctorRegisterButtonAction():
 # when logout of doctor is clicked
 def docDashLogoutButtonAction():
     docdash.hide()
+    docdash.logout()
     login.show()
 
 # when login on welcome page is clicked
@@ -81,6 +84,8 @@ docdash.logoutButton.clicked.connect(docDashLogoutButtonAction)
 # actions on welcome page buttons
 welcome.loginButton.clicked.connect(loginWelcomePageAction)
 welcome.registerButton.clicked.connect(registerWelcomePageAction)
+
+
 
 welcome.show()
 
