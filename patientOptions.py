@@ -2,9 +2,10 @@
 from frontend.patientHistoryWindow import Ui_PatientHistory
 from frontend.patientAppointmentWindow import Ui_PatientAppointment
 from PyQt5 import QtWidgets,QtGui
-
+from backend import DatabaseConnection
 class PatientHistory(QtWidgets.QMainWindow,Ui_PatientHistory):
-    def __init__(self) -> None:
+    __patientId = ""
+    def __init__(self,patientId) -> None:
         super().__init__()
         self.setupUi(self)
         currentRow = self.historyTable.rowCount()
@@ -12,11 +13,13 @@ class PatientHistory(QtWidgets.QMainWindow,Ui_PatientHistory):
         self.historyTable.horizontalHeader().setVisible(False)
         self.historyTable.setColumnCount(3)
         self.historyTable.setRowCount(10)
+        self.__patientId = patientId
         self.historyTable.insertRow(currentRow)
-        self.historyTable.setColumnWidth(0, 300)
-        self.historyTable.setColumnWidth(1, 300)
-        self.historyTable.setColumnWidth(2, 300)
-        self.historyTable.setItem(0, 0,QtWidgets.QTableWidgetItem("Hello"))
+        self.historyTable.setColumnWidth(0, 250)
+        self.historyTable.setColumnWidth(1, 250)
+        self.historyTable.setColumnWidth(2, 250)
+
+        self.historyTable.setItem(0, 0, QtWidgets.QTableWidgetItem("Hello"))
         self.historyTable.setItem(0, 1, QtWidgets.QTableWidgetItem("Hello"))
         self.historyTable.setItem(0, 2, QtWidgets.QTableWidgetItem("Hello"))
 
