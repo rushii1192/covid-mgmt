@@ -58,7 +58,7 @@ class DoctorRegister(QtWidgets.QMainWindow,Ui_DoctorRegisterWindow):
         email = self.email.text()
         address = self.address.text()
         psk = self.password.text()
-        edu = self.password.text()
+        edu = self.education.text()
         spec = self.specialization.text()
 
         if self.password.text()==self.cnfrmPassword.text():
