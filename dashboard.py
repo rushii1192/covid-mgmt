@@ -23,6 +23,14 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
         self.setEditState(True)
         self.changeButton.clicked.connect(lambda:self.setEditState(False))
         self.meetStart.clicked.connect(self.createMeet)
+        self.historyTable.setRowCount(20)
+        self.historyTable.setColumnCount(3)
+        self.historyTable.setColumnWidth(0, 250)
+        self.historyTable.setColumnWidth(1, 250)
+        self.historyTable.setColumnWidth(2, 250)
+        self.historyTable.verticalHeader().hide()
+        self.historyTable.horizontalHeader().hide()
+        self.showHistory()
 
     def setEditState(self,value):
         self.firstname.setReadOnly(value)
@@ -56,11 +64,9 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
         print('query is executed')
         result = self.__cursor.fetchall()
         for count,row in enumerate(result):
-            print(row)
-            ui = Ui_IndividualHistory()
-            ui.setupUi(self.historyArea)
-            ui.historyPatientName.setText("helo")
-        self.historyArea.show()
+            self.historyTable.setItem(count,0,QtWidgets.QTableWidgetItem(f'{row[-2]}'))
+            self.historyTable.setItem(count,1,QtWidgets.QTableWidgetItem(f'{row[-1]}'))
+            self.historyTable.setItem(count,2,QtWidgets.QTableWidgetItem(f'{row[1]}'))
 
     def setDoctorId(self,docId):
         self.__doctorId = docId
