@@ -1,3 +1,3 @@
 {
-    "files": ["frontend/widget-trail.ui","form.ui","frontend/maindashboard.ui","frontend/trailregister.ui","frontend/doctorregister.ui","frontend/register.ui","frontend/dialog.ui","Trail.qml","TrailForm.ui.qml","frontend/doctordashboard.ui","frontend/login.ui","frontend/mainwindow.ui","frontend/CustomerDashboard.ui","frontend/frontend-images.qrc","widget.py","dialog.ui","frontend/doctorProfile.ui"]
+    "files": ["TrailForm.ui.qml","frontend/login.ui","widget.py","frontend/CustomerDashboard.ui","frontend/maindashboard.ui","Trail.qml","frontend/doctorregister.ui","frontend/patienthistory.ui","frontend/doctorProfile.ui","frontend/individual_history.ui","frontend/mainwindow.ui","frontend/register.ui","frontend/frontend-images.qrc","frontend/dialog.ui","frontend/trailregister.ui","form.ui","frontend/widget-trail.ui","frontend/doctordashboard.ui","dialog.ui","frontend/appointmentMaker.ui","frontend/patientappointment.ui"]
 }
