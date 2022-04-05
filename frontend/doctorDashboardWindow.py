@@ -188,7 +188,7 @@ class Ui_doctorDashboard(object):
         doctorDashboard.addTab(self.history, "")
 
         self.retranslateUi(doctorDashboard)
-        doctorDashboard.setCurrentIndex(0)
+        doctorDashboard.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(doctorDashboard)
 
     def retranslateUi(self, doctorDashboard):
