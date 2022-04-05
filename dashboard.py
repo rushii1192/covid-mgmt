@@ -69,6 +69,7 @@ class WelcomePage(QtWidgets.QMainWindow,Ui_MainDashboard):
     __customerId = ""
     __dc = DatabaseConnection()
     __cursor = __dc.cursor()
+    __doctorsList = []
     def __init__(self) -> None:
         super().__init__()
         self.setupUi(self)
@@ -104,11 +105,12 @@ class WelcomePage(QtWidgets.QMainWindow,Ui_MainDashboard):
             self.doctorsTable.setItem(count, 1, QtWidgets.QTableWidgetItem(f'{row[-2]}'))
             self.doctorsTable.setItem(count, 2, QtWidgets.QTableWidgetItem(f'{row[-1]}'))
             self.doctorsTable.setCellWidget(count, 3, gotoButton)
+            self.__doctorsList.append(row[3])
 
     def gotoAppointment(self):
         self.pa = PatientAppointment()
-        self.pa.setIds("atharva@gmail.com",self.__customerId)
+
         for i in self.doctorsTable.selectionModel().selectedIndexes():
-            print(i.row())
+            self.pa.setIds(self.__doctorsList[i.row()], self.__customerId)
         self.pa.show()
 
