@@ -1,5 +1,4 @@
 #Database Connection
-from msilib import CreateRecord
 import mysql.connector as mysql
 import smtplib
 import jwt
@@ -25,7 +24,7 @@ class DatabaseConnection(object):
 class EmailSender(object):
     def __init__(self):
         self.server = smtplib.SMTP_SSL("smtp.gmail.com")
-        self.server.login("rushikeshborakhede@student.sfit.ac.in", "password")
+        self.server.login("rushikeshborakhede@student.sfit.ac.in", "Rushi_1192#")
 
     def sendEmail(self,receiver,content):
         self.server.sendmail('rushikeshborakhede@student.sfit.ac.in',receiver,content)
@@ -98,7 +97,5 @@ class MeetCreator(object):
         join_URL = y["join_url"]
         meetingPassword = y["password"]
 
-        return f'\n here is your zoom meeting link {join_URL} and your \
-                password: "{meetingPassword}"\n'
-
+        return join_URL
 
