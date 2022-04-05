@@ -55,7 +55,7 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
         self.__cursor.execute(f"SELECT * FROM appointment WHERE DoctorId = '{self.__doctorId}';")
         print('query is executed')
         result = self.__cursor.fetchall()
-        for row in result:
+        for count,row in enumerate(result):
             print(row)
             ui = Ui_IndividualHistory()
             ui.setupUi(self.historyArea)
@@ -90,7 +90,7 @@ class WelcomePage(QtWidgets.QMainWindow,Ui_MainDashboard):
         self.loginButton.setText(self.__customerId)
 
     def showHistory(self):
-        self.ph = PatientHistory()
+        self.ph = PatientHistory(self.__customerId)
         self.ph.show()
 
     def setDoctors(self):
