@@ -32,7 +32,7 @@ class Login(QtWidgets.QMainWindow,Ui_LoginWindow):
             result = cursor.fetchone()
             if result:
                 return (2,result[3])
-            return 0
+            return (0,"error")
 
     def setLogin(self):
         self.__login = True
