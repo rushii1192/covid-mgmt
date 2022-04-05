@@ -24,7 +24,7 @@ class DatabaseConnection(object):
 class EmailSender(object):
     def __init__(self):
         self.server = smtplib.SMTP_SSL("smtp.gmail.com")
-        self.server.login("rushikeshborakhede@student.sfit.ac.in", "Rushi_1192#")
+        self.server.login("rushikeshborakhede@student.sfit.ac.in", "passowrd")
 
     def sendEmail(self,receiver,content):
         self.server.sendmail('rushikeshborakhede@student.sfit.ac.in',receiver,content)
