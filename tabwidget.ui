@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TabWidget</class>
+ <widget class="QTabWidget" name="TabWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1062</width>
+    <height>577</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TabWidget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
+  <widget class="QWidget" name="home">
+   <attribute name="title">
+    <string>Home</string>
+   </attribute>
+   <widget class="QPushButton" name="homeButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>240</y>
+      <width>251</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(91, 255, 82);</string>
+    </property>
+    <property name="text">
+     <string>Home</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="appointment">
+   <attribute name="title">
+    <string>Appointment</string>
+   </attribute>
+   <widget class="QPushButton" name="appointmentButton">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>230</y>
+      <width>251</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(91, 255, 82);</string>
+    </property>
+    <property name="text">
+     <string>Appointment</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="history">
+   <attribute name="title">
+    <string>History</string>
+   </attribute>
+   <widget class="QPushButton" name="historyButton">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>240</y>
+      <width>251</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(91, 255, 82);</string>
+    </property>
+    <property name="text">
+     <string>History</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

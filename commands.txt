@@ -3,3 +3,6 @@ pip install pyqt5
 pyuic5 -x frontend/mainwindow.ui -o trail.py
 python -m frontend.esha
 pip install mysql-connector-python
+pip install requests
+pip install jwt
+pip install PyAutoGUI

@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>MainDashboard</class>
+ <widget class="QTabWidget" name="MainDashboard">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1282</width>
+    <height>686</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>MainDashboard</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 170, 0);</string>
-  </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>26</height>
-    </rect>
-   </property>
+  <widget class="QWidget" name="tab">
+   <attribute name="title">
+    <string>Home</string>
+   </attribute>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

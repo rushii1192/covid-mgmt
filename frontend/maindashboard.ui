@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1255</width>
-    <height>696</height>
+    <width>1272</width>
+    <height>744</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,7 +31,7 @@
       <x>0</x>
       <y>0</y>
       <width>241</width>
-      <height>711</height>
+      <height>821</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -56,26 +56,30 @@
     <widget class="QPushButton" name="loginButton">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>290</y>
-       <width>91</width>
+       <x>10</x>
+       <y>270</y>
+       <width>221</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Bookman Old Style</family>
        <pointsize>14</pointsize>
       </font>
      </property>
      <property name="cursor">
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <property name="styleSheet">
       <string notr="true">QPushButton#loginButton{
 	background-color:rgb(255, 255, 255);
 	border-radius:15px;
-	padding-left:5px;
 	color:rgb(0, 0, 127);
 }
 
@@ -91,9 +95,9 @@ QPushButton#loginButton:hover{
     <widget class="QPushButton" name="registerButton">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>340</y>
-       <width>121</width>
+       <x>10</x>
+       <y>310</y>
+       <width>81</width>
        <height>31</height>
       </rect>
      </property>
@@ -109,7 +113,6 @@ QPushButton#loginButton:hover{
       <string notr="true">QPushButton#registerButton{
 	background-color:rgb(255, 255, 255);
 	border-radius:15px;
-	padding-left:5px;
 	color:rgb(0, 0, 127);
 }
 
@@ -125,9 +128,9 @@ QPushButton#registerButton:hover{
     <widget class="QPushButton" name="dashboardButton">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>240</y>
-       <width>131</width>
+       <x>10</x>
+       <y>230</y>
+       <width>111</width>
        <height>31</height>
       </rect>
      </property>
@@ -143,7 +146,6 @@ QPushButton#registerButton:hover{
       <string notr="true">QPushButton#dashboardButton{
 	background-color:rgb(255, 255, 255);
 	border-radius:15px;
-	padding-left:5px;
 	color:rgb(0, 0, 127);
 }
 
@@ -159,9 +161,9 @@ QPushButton#dashboardButton:hover{
     <widget class="QPushButton" name="doctorButton">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>390</y>
-       <width>101</width>
+       <x>10</x>
+       <y>350</y>
+       <width>71</width>
        <height>31</height>
       </rect>
      </property>
@@ -177,7 +179,6 @@ QPushButton#dashboardButton:hover{
       <string notr="true">QPushButton#doctorButton{
 	background-color:rgb(255, 255, 255);
 	border-radius:15px;
-	padding-left:5px;
 	color:rgb(0, 0, 127);
 }
 
@@ -193,9 +194,9 @@ QPushButton#doctorButton:hover{
     <widget class="QPushButton" name="historyButton">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>440</y>
-       <width>101</width>
+       <x>10</x>
+       <y>390</y>
+       <width>71</width>
        <height>31</height>
       </rect>
      </property>
@@ -211,7 +212,6 @@ QPushButton#doctorButton:hover{
       <string notr="true">QPushButton#historyButton{
 	background-color:rgb(255, 255, 255);
 	border-radius:15px;
-	padding-left:5px;
 	color:rgb(0, 0, 127);
 }
 
@@ -222,6 +222,52 @@ QPushButton#historyButton:hover{
      </property>
      <property name="text">
       <string>History</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="logoutButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>430</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#logoutButton{
+	background-color:rgb(255, 255, 255);
+	border-radius:15px;
+	color:rgb(0, 0, 127);
+}
+
+QPushButton#logoutButton:hover{
+	color:rgb(255, 255, 255);
+	background-color:rgb(0, 0, 127);
+}</string>
+     </property>
+     <property name="text">
+      <string>LogOut</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_4" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>670</y>
+       <width>241</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
     </widget>
    </widget>
@@ -305,8 +351,8 @@ padding-bottom:3px</string>
     <rect>
      <x>270</x>
      <y>290</y>
-     <width>941</width>
-     <height>391</height>
+     <width>931</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -384,6 +430,20 @@ background-color: rgb(166, 197, 255);</string>
    </property>
    <property name="pixmap">
     <pixmap>images/dashboard_img.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="doctorsTable">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>370</y>
+     <width>931</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:12px;</string>
    </property>
   </widget>
  </widget>
