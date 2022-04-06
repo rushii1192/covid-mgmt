@@ -30,7 +30,6 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
         self.historyTable.setColumnWidth(2, 250)
         self.historyTable.verticalHeader().hide()
         self.historyTable.horizontalHeader().hide()
-        self.showHistory()
 
     def setEditState(self,value):
         self.firstname.setReadOnly(value)
@@ -59,17 +58,29 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
     def logout(self):
         self.__dc.close()
 
-    def showHistory(self):
+    def updateProfile(self):
+        pass
+    def setDoctorId(self,docId):
+        self.__doctorId = docId
         self.__cursor.execute(f"SELECT * FROM appointment WHERE DoctorId = '{self.__doctorId}';")
         print('query is executed')
         result = self.__cursor.fetchall()
-        for count,row in enumerate(result):
-            self.historyTable.setItem(count,0,QtWidgets.QTableWidgetItem(f'{row[-2]}'))
-            self.historyTable.setItem(count,1,QtWidgets.QTableWidgetItem(f'{row[-1]}'))
-            self.historyTable.setItem(count,2,QtWidgets.QTableWidgetItem(f'{row[1]}'))
+        for count, row in enumerate(result):
+            self.historyTable.setItem(count, 0, QtWidgets.QTableWidgetItem(f'{row[-2]}'))
+            self.historyTable.setItem(count, 1, QtWidgets.QTableWidgetItem(f'{row[-1]}'))
+            self.historyTable.setItem(count, 2, QtWidgets.QTableWidgetItem(f'{row[1]}'))
 
-    def setDoctorId(self,docId):
-        self.__doctorId = docId
+        self.__cursor.execute(f"SELECT * FROM doctor WHERE Email='{self.__doctorId}';")
+        result = self.__cursor.fetchone()
+        self.firstname.setText(result[0])
+        self.lastName.setText(result[1])
+        self.mobile.setText(f'{result[2]}')
+        self.email.setText(result[3])
+        self.address.setText(result[4])
+        self.password.setText(result[5])
+        self.education.setText(result[6])
+        self.specialization.setText(result[7])
+
 
 class WelcomePage(QtWidgets.QMainWindow,Ui_MainDashboard):
     __customerId = ""
