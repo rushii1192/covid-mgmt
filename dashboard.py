@@ -54,7 +54,7 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
         # pyg.click(x=50, y=776, clicks=1, interval=0, button='left')
 
     def logout(self):
-        self.__dc.close()
+        pass
 
     def prescribeMedicineButtonAction(self):
         es = EmailSender()
@@ -74,6 +74,7 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
     def updateProfile(self):
         self.__cursor.execute(f"UPDATE doctor SET FirstName='{self.firstname.text()}',LastName='{self.lastName.text()}',Mobile={self.mobile.text()},Email='{self.email.text()}',Address='{self.address.text()}',Password='{self.password.text()}',Education='{self.education.text()}',Specialization='{self.specialization.text()}' WHERE Email='{self.__doctorId}';")
         self.__dc.commit()
+        self.__cursor = self.__dc.cursor(buffered=True)
         msg = QtWidgets.QMessageBox(self)
         msg.setWindowTitle('Successfull')
         msg.setText(f'Your profile details has been updated.\nlogout and login again to see changes.')
@@ -83,7 +84,6 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
 
     def setDoctorId(self,docId):
         self.__doctorId = docId
-
         # for loading history of doctor
         self.__cursor.execute(f"SELECT * FROM appointment WHERE DoctorId = '{self.__doctorId}';")
         print('query is executed')
