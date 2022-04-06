@@ -1,18 +1,14 @@
 from PyQt5 import QtWidgets, QtGui,QtCore
-from frontend.custDashboardWindow import Ui_CustomerDashboardWindow
 from frontend.doctorDashboardWindow import Ui_doctorDashboard
 from frontend.maindashboard import Ui_MainDashboard
-from frontend.doctorProfileWidget import Ui_DoctorProfile
-from frontend.individualHistory import Ui_IndividualHistory
-from backend import DatabaseConnection, MeetCreator
+from backend import DatabaseConnection, MeetCreator, EmailSender
 from patientOptions import PatientHistory, PatientAppointment
 import webbrowser as wb
-import time
-import pyautogui as pyg
+from email.message import EmailMessage
 
 class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
     __dc = DatabaseConnection()
-    __cursor = __dc.cursor()
+    __cursor = __dc.cursor(buffered=True)
     __doctorId = ""
     def __init__(self) -> None:
         super().__init__()
@@ -30,6 +26,8 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
         self.historyTable.setColumnWidth(2, 250)
         self.historyTable.verticalHeader().hide()
         self.historyTable.horizontalHeader().hide()
+        self.prescribeMedicinesButton.clicked.connect(self.prescribeMedicineButtonAction)
+        self.applyButton.clicked.connect(self.updateProfile)
 
     def setEditState(self,value):
         self.firstname.setReadOnly(value)
@@ -58,10 +56,35 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
     def logout(self):
         self.__dc.close()
 
+    def prescribeMedicineButtonAction(self):
+        es = EmailSender()
+        msg = EmailMessage()
+        msg['subject'] = 'Your Prescription'
+        msg.set_content(f'''The prescription is
+            \n{self.medicines.toPlainText()}
+        ''')
+        es.sendEmail(self.patientName.text(), str(msg))
+        msg = QtWidgets.QMessageBox(self)
+        msg.setWindowTitle('Successfull')
+        msg.setText(f'Prescription has been mailed to patient.')
+        msg.setStyleSheet('color:black')
+        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        msg.exec_()
+
     def updateProfile(self):
-        pass
+        self.__cursor.execute(f"UPDATE doctor SET FirstName='{self.firstname.text()}',LastName='{self.lastName.text()}',Mobile={self.mobile.text()},Email='{self.email.text()}',Address='{self.address.text()}',Password='{self.password.text()}',Education='{self.education.text()}',Specialization='{self.specialization.text()}' WHERE Email='{self.__doctorId}';")
+        self.__dc.commit()
+        msg = QtWidgets.QMessageBox(self)
+        msg.setWindowTitle('Successfull')
+        msg.setText(f'Your profile details has been updated.\nlogout and login again to see changes.')
+        msg.setStyleSheet('color:black')
+        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        msg.exec_()
+
     def setDoctorId(self,docId):
         self.__doctorId = docId
+
+        # for loading history of doctor
         self.__cursor.execute(f"SELECT * FROM appointment WHERE DoctorId = '{self.__doctorId}';")
         print('query is executed')
         result = self.__cursor.fetchall()
@@ -70,6 +93,7 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
             self.historyTable.setItem(count, 1, QtWidgets.QTableWidgetItem(f'{row[-1]}'))
             self.historyTable.setItem(count, 2, QtWidgets.QTableWidgetItem(f'{row[1]}'))
 
+        # for loding profile details
         self.__cursor.execute(f"SELECT * FROM doctor WHERE Email='{self.__doctorId}';")
         result = self.__cursor.fetchone()
         self.firstname.setText(result[0])
@@ -81,6 +105,12 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
         self.education.setText(result[6])
         self.specialization.setText(result[7])
 
+        # for loading current appointment
+        self.__cursor.execute(f"SELECT * FROM appointment WHERE DoctorId='{self.__doctorId}'")
+        result = self.__cursor.fetchone()
+        self.patientName.setText(result[-2])
+        self.pastHistory.setText("")
+        self.problem.setText(result[-1])
 
 class WelcomePage(QtWidgets.QMainWindow,Ui_MainDashboard):
     __customerId = ""
