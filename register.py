@@ -31,19 +31,19 @@ class CustomerRegister(QtWidgets.QMainWindow,Ui_RegisterWindow):
             msg.setStyleSheet('color:black')
             msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
             msg.exec_()
+        else:
+            es = EmailSender()
+            msg = EmailMessage()
+            msg['subject'] = 'Registered Succefully to system'
+            msg.set_content(f'You have sucessfully regusterd for the sytem with username-{self.email.text()} and password-{self.password.text()}.')
+            es.sendEmail(email,str(msg))
 
-        es = EmailSender()
-        msg = EmailMessage()
-        msg['subject'] = 'Query from customer'
-        msg.set_content(f'Hi you are welcomed to our system.')
-        es.sendEmail(email,str(msg))
-
-        msg = QtWidgets.QMessageBox(self)
-        msg.setWindowTitle('Successfull')
-        msg.setText(f'You have succesfully registered.\n{email} is your username.')
-        msg.setStyleSheet('color:black')
-        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
-        msg.exec_()
+            msg = QtWidgets.QMessageBox(self)
+            msg.setWindowTitle('Successfull')
+            msg.setText(f'You have succesfully registered.\n{email} is your username.')
+            msg.setStyleSheet('color:black')
+            msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+            msg.exec_()
 
 class DoctorRegister(QtWidgets.QMainWindow,Ui_DoctorRegisterWindow):
     def __init__(self) -> None:
