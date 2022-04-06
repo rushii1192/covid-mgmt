@@ -18,26 +18,72 @@ class Ui_doctorDashboard(object):
         doctorDashboard.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.appointments = QtWidgets.QWidget()
         self.appointments.setObjectName("appointments")
-        self.meetStart = QtWidgets.QPushButton(self.appointments)
-        self.meetStart.setGeometry(QtCore.QRect(550, 130, 191, 51))
-        self.meetStart.setStyleSheet("background-color: rgb(0, 0, 127);\n"
-"color: rgb(255, 255, 255);")
-        self.meetStart.setObjectName("meetStart")
         self.patientName = QtWidgets.QLabel(self.appointments)
         self.patientName.setGeometry(QtCore.QRect(90, 50, 181, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.patientName.setFont(font)
+        self.patientName.setStyleSheet("background-color:rgb(199,230,255);\n"
+"border-radius:12px;")
         self.patientName.setObjectName("patientName")
         self.problem = QtWidgets.QLabel(self.appointments)
-        self.problem.setGeometry(QtCore.QRect(90, 110, 181, 31))
+        self.problem.setGeometry(QtCore.QRect(90, 110, 321, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.problem.setFont(font)
+        self.problem.setStyleSheet("background-color:rgb(199,230,255);\n"
+"border-radius:12px;")
         self.problem.setObjectName("problem")
         self.pastHistory = QtWidgets.QLabel(self.appointments)
         self.pastHistory.setGeometry(QtCore.QRect(90, 170, 181, 31))
+        self.pastHistory.setStyleSheet("background-color:rgb(199,230,255);\n"
+"border-radius:12px;")
         self.pastHistory.setObjectName("pastHistory")
         self.pastHistory_2 = QtWidgets.QLabel(self.appointments)
-        self.pastHistory_2.setGeometry(QtCore.QRect(90, 240, 181, 31))
+        self.pastHistory_2.setGeometry(QtCore.QRect(90, 240, 281, 31))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        font.setBold(True)
+        self.pastHistory_2.setFont(font)
+        self.pastHistory_2.setStyleSheet("background-color:rgb(199,230,255);\n"
+"border-radius:12px;")
         self.pastHistory_2.setObjectName("pastHistory_2")
-        self.medicines = QtWidgets.QTextEdit(self.appointments)
-        self.medicines.setGeometry(QtCore.QRect(80, 300, 691, 291))
+        self.meetStart = QtWidgets.QPushButton(self.appointments)
+        self.meetStart.setGeometry(QtCore.QRect(620, 140, 161, 51))
+        self.meetStart.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.meetStart.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(0, 0, 127);\n"
+"border-radius:25px;\n"
+"font: 16pt \"Segoe UI\";")
+        self.meetStart.setObjectName("meetStart")
+        self.prescribeMedicinesButton = QtWidgets.QPushButton(self.appointments)
+        self.prescribeMedicinesButton.setGeometry(QtCore.QRect(320, 570, 291, 51))
+        self.prescribeMedicinesButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.prescribeMedicinesButton.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(0, 0, 127);\n"
+"border-radius:25px;\n"
+"font: 16pt \"Segoe UI\";")
+        self.prescribeMedicinesButton.setObjectName("prescribeMedicinesButton")
+        self.widget = QtWidgets.QWidget(self.appointments)
+        self.widget.setGeometry(QtCore.QRect(50, 20, 961, 621))
+        self.widget.setStyleSheet("background-color:rgb(199,230,255);\n"
+"border-radius:12px;")
+        self.widget.setObjectName("widget")
+        self.medicines = QtWidgets.QTextEdit(self.widget)
+        self.medicines.setGeometry(QtCore.QRect(50, 300, 811, 221))
+        self.medicines.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color:rgb(0, 0, 0);\n"
+"border-radius:25px;\n"
+"padding-left:10px;\n"
+"padding-left:25px;")
         self.medicines.setObjectName("medicines")
+        self.widget.raise_()
+        self.patientName.raise_()
+        self.problem.raise_()
+        self.pastHistory.raise_()
+        self.pastHistory_2.raise_()
+        self.meetStart.raise_()
+        self.prescribeMedicinesButton.raise_()
         doctorDashboard.addTab(self.appointments, "")
         self.profile = QtWidgets.QWidget()
         self.profile.setObjectName("profile")
@@ -188,17 +234,18 @@ class Ui_doctorDashboard(object):
         doctorDashboard.addTab(self.history, "")
 
         self.retranslateUi(doctorDashboard)
-        doctorDashboard.setCurrentIndex(2)
+        doctorDashboard.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(doctorDashboard)
 
     def retranslateUi(self, doctorDashboard):
         _translate = QtCore.QCoreApplication.translate
         doctorDashboard.setWindowTitle(_translate("doctorDashboard", "Doctor Dashboard"))
-        self.meetStart.setText(_translate("doctorDashboard", "Start Meet"))
         self.patientName.setText(_translate("doctorDashboard", "Patient Name"))
         self.problem.setText(_translate("doctorDashboard", "Patient Problem"))
         self.pastHistory.setText(_translate("doctorDashboard", "Patient Past History"))
         self.pastHistory_2.setText(_translate("doctorDashboard", "Prescribe Medicines"))
+        self.meetStart.setText(_translate("doctorDashboard", "Create Meet"))
+        self.prescribeMedicinesButton.setText(_translate("doctorDashboard", "Prescribe Medicines"))
         doctorDashboard.setTabText(doctorDashboard.indexOf(self.appointments), _translate("doctorDashboard", "Appointments"))
         self.education.setPlaceholderText(_translate("doctorDashboard", "Education"))
         self.specialization.setPlaceholderText(_translate("doctorDashboard", "Specialization"))
