@@ -10,6 +10,7 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
     __dc = DatabaseConnection()
     __cursor = __dc.cursor(buffered=True)
     __doctorId = ""
+    meet_url = ""
     def __init__(self) -> None:
         super().__init__()
         self.setupUi(self)
@@ -43,15 +44,15 @@ class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
     
     def createMeet(self):
         meet = MeetCreator()
-        meet_url = meet.createMeeting('2022-04-04T07: 04: 25')
-        chrome_path = "C:\\Program Files\\Google\\Chrome\\Application\\chrome"
-        wb.open(meet_url, new=2)  # open zoom link in a new window
-        # time.sleep(5)  # given time for the link to show app top-up window
-        # pyg.click(x=805, y=254, clicks=1, interval=0, button='left')  # click on open zoom.app option
-        # time.sleep(10)  # wait for 10 sec
-        # pyg.click(x=195, y=31, clicks=1, interval=0, button='left')  # maximize zoom app
-        # time.sleep(3)  # wait for 3 sec
-        # pyg.click(x=50, y=776, clicks=1, interval=0, button='left')
+        self.meet_url = meet.createMeeting('2022-04-04T07: 04: 25')
+        wb.open(self.meet_url, new=2)  # open zoom link in a new window
+        es = EmailSender()
+        msg = EmailMessage()
+        msg['subject'] = 'Link for the meet'
+        msg.set_content(f'''click on bellow link to meet your doctor
+                    \n{self.meet_url}
+                ''')
+        es.sendEmail(self.patientName.text(), str(msg))
 
     def logout(self):
         pass
@@ -131,10 +132,13 @@ class WelcomePage(QtWidgets.QMainWindow,Ui_MainDashboard):
         self.doctorsTable.setColumnWidth(0,450)
         self.doctorsTable.setColumnWidth(2,175)
         self.setDoctors()
+        self.joinMeetButton.hide()
 
-    def setCustomerId(self,custId):
+
+    def setCustomerId(self,custId,doctor):
         self.__customerId = custId   
         self.loginButton.setText(self.__customerId)
+        self.joinMeetButton.clicked.connect(lambda :self.joinMeetButtonAction(doctor))
 
     def showHistory(self):
         self.ph = PatientHistory(self.__customerId)
@@ -160,4 +164,9 @@ class WelcomePage(QtWidgets.QMainWindow,Ui_MainDashboard):
         for i in self.doctorsTable.selectionModel().selectedIndexes():
             self.pa.setIds(self.__doctorsList[i.row()], self.__customerId)
         self.pa.show()
+
+    def joinMeetButtonAction(self,db):
+        print(db.meet_url)
+        wb.open(db.meet_url, new=2)
+
 
