@@ -29,7 +29,7 @@ class Ui_MainDashboard(object):
         self.label.setPixmap(QtGui.QPixmap(".\\frontend\\images/medical-logo.jpg"))
         self.label.setObjectName("label")
         self.loginButton = QtWidgets.QPushButton(self.widget)
-        self.loginButton.setGeometry(QtCore.QRect(10, 270, 221, 31))
+        self.loginButton.setGeometry(QtCore.QRect(0, 270, 221, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.loginButton.setFont(font)
@@ -48,7 +48,7 @@ class Ui_MainDashboard(object):
 "}")
         self.loginButton.setObjectName("loginButton")
         self.registerButton = QtWidgets.QPushButton(self.widget)
-        self.registerButton.setGeometry(QtCore.QRect(10, 310, 81, 31))
+        self.registerButton.setGeometry(QtCore.QRect(10, 220, 81, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.registerButton.setFont(font)
@@ -65,7 +65,7 @@ class Ui_MainDashboard(object):
 "}")
         self.registerButton.setObjectName("registerButton")
         self.dashboardButton = QtWidgets.QPushButton(self.widget)
-        self.dashboardButton.setGeometry(QtCore.QRect(10, 230, 111, 31))
+        self.dashboardButton.setGeometry(QtCore.QRect(10, 310, 111, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.dashboardButton.setFont(font)
@@ -81,23 +81,23 @@ class Ui_MainDashboard(object):
 "    background-color:rgb(0, 0, 127);\n"
 "}")
         self.dashboardButton.setObjectName("dashboardButton")
-        self.doctorButton = QtWidgets.QPushButton(self.widget)
-        self.doctorButton.setGeometry(QtCore.QRect(10, 350, 71, 31))
+        self.joinMeetButton = QtWidgets.QPushButton(self.widget)
+        self.joinMeetButton.setGeometry(QtCore.QRect(10, 350, 101, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
-        self.doctorButton.setFont(font)
-        self.doctorButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.doctorButton.setStyleSheet("QPushButton#doctorButton{\n"
+        self.joinMeetButton.setFont(font)
+        self.joinMeetButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.joinMeetButton.setStyleSheet("QPushButton#joinMeetButton{\n"
 "    background-color:rgb(255, 255, 255);\n"
 "    border-radius:15px;\n"
 "    color:rgb(0, 0, 127);\n"
 "}\n"
 "\n"
-"QPushButton#doctorButton:hover{\n"
+"QPushButton#joinMeetButton:hover{\n"
 "    color:rgb(255, 255, 255);\n"
 "    background-color:rgb(0, 0, 127);\n"
 "}")
-        self.doctorButton.setObjectName("doctorButton")
+        self.joinMeetButton.setObjectName("joinMeetButton")
         self.historyButton = QtWidgets.QPushButton(self.widget)
         self.historyButton.setGeometry(QtCore.QRect(10, 390, 71, 31))
         font = QtGui.QFont()
@@ -207,7 +207,7 @@ class Ui_MainDashboard(object):
         self.loginButton.setText(_translate("MainDashboard", "Login"))
         self.registerButton.setText(_translate("MainDashboard", "Register"))
         self.dashboardButton.setText(_translate("MainDashboard", "Dashboard"))
-        self.doctorButton.setText(_translate("MainDashboard", "Doctor"))
+        self.joinMeetButton.setText(_translate("MainDashboard", "Join Meet"))
         self.historyButton.setText(_translate("MainDashboard", "History"))
         self.logoutButton.setText(_translate("MainDashboard", "LogOut"))
         self.doctorSearchText.setPlaceholderText(_translate("MainDashboard", "Search Doctors"))
