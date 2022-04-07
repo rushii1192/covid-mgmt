@@ -22,8 +22,9 @@ def loginButtonAction():
         login.hide()
         welcome.logoutButton.show()
         welcome.historyButton.show()
+        welcome.joinMeetButton.show()
         welcome.registerButton.hide()
-        welcome.setCustomerId(loginState[1])
+        welcome.setCustomerId(loginState[1],docdash)
         welcome.show()
 
     elif loginState[0] == 2:
