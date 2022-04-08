@@ -292,60 +292,6 @@ QPushButton#logoutButton:hover{
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="doctorSearchText">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>240</y>
-     <width>351</width>
-     <height>40</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(255,255,255);
-border-radius:20px;
-padding-left:10px;
-padding-bottom:3px</string>
-   </property>
-   <property name="placeholderText">
-    <string>Search Doctors</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="doctorSearchButton">
-   <property name="geometry">
-    <rect>
-     <x>670</x>
-     <y>240</y>
-     <width>111</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-   <property name="cursor">
-    <cursorShape>PointingHandCursor</cursorShape>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#doctorSearchButton{
-	border-radius:20px;
-	padding-left:5px;
-	color:rgb(255, 255, 255);
-	background-color:rgb(0, 0, 127);
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Search</string>
-   </property>
-  </widget>
   <widget class="QWidget" name="widget_3" native="true">
    <property name="geometry">
     <rect>
