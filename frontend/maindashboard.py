@@ -142,30 +142,6 @@ class Ui_MainDashboard(object):
         self.statusbar = QtWidgets.QStatusBar(MainDashboard)
         self.statusbar.setGeometry(QtCore.QRect(0, 0, 3, 25))
         self.statusbar.setObjectName("statusbar")
-        self.doctorSearchText = QtWidgets.QLineEdit(MainDashboard)
-        self.doctorSearchText.setGeometry(QtCore.QRect(280, 240, 351, 40))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.doctorSearchText.setFont(font)
-        self.doctorSearchText.setStyleSheet("background-color:rgb(255,255,255);\n"
-"border-radius:20px;\n"
-"padding-left:10px;\n"
-"padding-bottom:3px")
-        self.doctorSearchText.setObjectName("doctorSearchText")
-        self.doctorSearchButton = QtWidgets.QPushButton(MainDashboard)
-        self.doctorSearchButton.setGeometry(QtCore.QRect(670, 240, 111, 41))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.doctorSearchButton.setFont(font)
-        self.doctorSearchButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.doctorSearchButton.setStyleSheet("QPushButton#doctorSearchButton{\n"
-"    border-radius:20px;\n"
-"    padding-left:5px;\n"
-"    color:rgb(255, 255, 255);\n"
-"    background-color:rgb(0, 0, 127);\n"
-"}\n"
-"")
-        self.doctorSearchButton.setObjectName("doctorSearchButton")
         self.widget_3 = QtWidgets.QWidget(MainDashboard)
         self.widget_3.setGeometry(QtCore.QRect(270, 290, 931, 61))
         self.widget_3.setStyleSheet("background-color: rgb(255, 255, 255);\n"
@@ -210,8 +186,6 @@ class Ui_MainDashboard(object):
         self.joinMeetButton.setText(_translate("MainDashboard", "Join Meet"))
         self.historyButton.setText(_translate("MainDashboard", "History"))
         self.logoutButton.setText(_translate("MainDashboard", "LogOut"))
-        self.doctorSearchText.setPlaceholderText(_translate("MainDashboard", "Search Doctors"))
-        self.doctorSearchButton.setText(_translate("MainDashboard", "Search"))
         self.label_2.setText(_translate("MainDashboard", "Name"))
         self.label_3.setText(_translate("MainDashboard", "Degree"))
         self.label_4.setText(_translate("MainDashboard", "Speciality"))
