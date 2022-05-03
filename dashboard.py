@@ -5,6 +5,7 @@ from backend import DatabaseConnection, MeetCreator, EmailSender
 from patientOptions import PatientHistory, PatientAppointment
 import webbrowser as wb
 from email.message import EmailMessage
+import threading
 
 class DoctorDashboard(QtWidgets.QTabWidget,Ui_doctorDashboard):
     __dc = DatabaseConnection()
