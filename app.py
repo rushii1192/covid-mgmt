@@ -41,9 +41,9 @@ def registerButtonAction():
 
 # when register button on custregister page is clicked
 def custRegisterButtonAction():
-    custRegister.register()
-    custRegister.hide()
-    login.show()
+    if custRegister.register():
+        custRegister.hide()
+        login.show()
 
 # when register as dcotor button on custregister page is clicked
 def custDoctorRegisterButtonAction():
