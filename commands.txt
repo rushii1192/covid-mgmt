@@ -5,5 +5,4 @@ python -m frontend.esha
 pip install mysql-connector-python
 pip install requests
 pip install jwt
-pip install PyAutoGUI
 mysql -h db4free.net -P 3306 -D covid_mgmt -u sql6468008 -p
