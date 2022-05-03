@@ -24,7 +24,7 @@ class DatabaseConnection(object):
 class EmailSender(object):
     def __init__(self):
         self.server = smtplib.SMTP_SSL("smtp.gmail.com")
-        self.server.login("rushikeshborakhede@student.sfit.ac.in", "password")
+        self.server.login("rushikeshborakhede@student.sfit.ac.in", "Rushi_1192#")
 
     def sendEmail(self,receiver,content):
         self.server.sendmail('rushikeshborakhede@student.sfit.ac.in',receiver,content)
@@ -99,3 +99,23 @@ class MeetCreator(object):
 
         return join_URL
 
+class Validator(object):
+    symbols = ['!','@','#','$','%','^','&','*']
+    def checkNullValues(self,val):
+        if val == "":
+            return True
+        return False
+
+    def passwordValidator(self,psk):
+        if len(psk)<8 and len(psk)>18:
+            return (False,"Invalid Length")
+        
+        status = False
+        for symbol in self.symbols:
+            if symbol in psk:
+                status = True
+        
+        if not status:
+            return (False,"Symbol is not present")
+
+        return (True,"Valid Password")
